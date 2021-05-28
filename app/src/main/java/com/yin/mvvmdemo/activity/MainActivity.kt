@@ -39,12 +39,9 @@ class MainActivity : AppCompatActivity() {
         activityMain1Binding?.recyclerView?.adapter = newsAdapter
         mainViewModel?.loadNews()
 
-        activityMain1Binding?.btn?.setOnClickListener(View.OnClickListener {
-            startActivity(Intent(this, ThirdActivity::class.java))
-        })
-
-
-
+//        activityMain1Binding?.btn?.setOnClickListener(View.OnClickListener {
+//            startActivity(Intent(this, ThirdActivity::class.java))
+//        })
 //        setContentView(R.layout.activity_main)
 //        tv.setOnClickListener(View.OnClickListener {
 //            Log.w("scj", "onclick")
