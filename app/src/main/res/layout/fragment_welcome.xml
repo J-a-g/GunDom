@@ -6,10 +6,9 @@
 
     <Button
         android:id="@+id/btn_login"
-
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="@drawable/shape_btn"
+        android:background="@drawable/shape_btn_login"
         android:text="Have a account ? Login"
         android:textSize="@dimen/txt_big_size"
         app:layout_constraintBottom_toTopOf="@id/btn_register"
@@ -18,7 +17,6 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_chainStyle="packed"
         app:layout_constraintWidth_default="percent"
         app:layout_constraintWidth_percent="0.8" />
 
@@ -26,7 +24,7 @@
         android:id="@+id/btn_register"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="@drawable/shape_btn"
+        android:background="@drawable/shape_btn_regist"
         android:text="Join us"
         android:textSize="@dimen/txt_big_size"
         app:layout_constraintBottom_toBottomOf="parent"

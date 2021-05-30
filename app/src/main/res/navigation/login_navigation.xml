@@ -16,7 +16,7 @@
     <fragment
         android:id="@+id/welcome"
         android:name="com.yin.mvvmdemo.fragments.login.WelComeFragment"
-        android:label="LoginFragment"
+        android:label="WelComeFragment"
         tools:layout="@layout/fragment_welcome">
         <action
             android:id="@+id/action_welcome_to_login"
@@ -34,12 +34,19 @@
     <fragment
         android:id="@+id/register"
         android:name="com.yin.mvvmdemo.fragments.login.RegistFragment"
-        android:label="LoginFragment"
+        android:label="RegistFragment"
         tools:layout="@layout/fragment_regist">
 
         <argument
             android:name="EMAIL"
             android:defaultValue="2005@qq.com"
             app:argType="string" />
+
+        <argument
+            android:name="myarg"
+            android:defaultValue="Android!"/>
+        <!-- TODO STEP 11.1 - Add a deep link to www.example.com/{myarg}/ -->
+
+        <deepLink app:uri="www.example.com/{myarg}" />
     </fragment>
 </navigation>
