@@ -7,12 +7,12 @@
 
     <Button
         android:id="@+id/btn_menu"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="菜单式导航"
         app:layout_constraintVertical_chainStyle="packed"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@id/btn_drawer"
+        app:layout_constraintEnd_toEndOf="@id/btn_drawer"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toTopOf="@id/btn_drawer"
         tools:ignore="MissingConstraints" />
