@@ -1,14 +1,15 @@
 package com.yin.mvvmdemo.fragments.login
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.yin.mvvmdemo.R
+import com.yin.mvvmdemo.activity.MainActivity
 
 class LoginFragment : Fragment() {
     override fun onCreateView(
@@ -27,7 +28,7 @@ class LoginFragment : Fragment() {
             activity?.onBackPressed()
         }
         view.findViewById<Button>(R.id.btn_sign_in).setOnClickListener {
-            Toast.makeText(activity, "sign_in", Toast.LENGTH_SHORT).show()
+            context?.startActivity(Intent(context, MainActivity::class.java))
         }
     }
 }

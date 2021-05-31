@@ -8,35 +8,44 @@
     <Button
         android:id="@+id/btn_menu"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:text="菜单式导航"
-        app:layout_constraintVertical_chainStyle="packed"
-        app:layout_constraintStart_toStartOf="@id/btn_drawer"
-        app:layout_constraintEnd_toEndOf="@id/btn_drawer"
-        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="@dimen/txt_big_size"
         app:layout_constraintBottom_toTopOf="@id/btn_drawer"
+        app:layout_constraintEnd_toEndOf="@id/btn_drawer"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintStart_toStartOf="@id/btn_drawer"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintWidth_percent="0.8"
         tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/btn_drawer"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:text="抽屉式菜单导航"
+        android:textSize="@dimen/txt_big_size"
+        app:layout_constraintBottom_toTopOf="@id/btn_bottom"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/btn_menu"
-        app:layout_constraintBottom_toTopOf="@id/btn_bottom"
+        app:layout_constraintWidth_percent="0.8"
         tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/btn_bottom"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:text="底部式菜单导航"
+        android:textSize="@dimen/txt_big_size"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/btn_drawer"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintWidth_percent="0.8"
         tools:ignore="MissingConstraints" />
 
 

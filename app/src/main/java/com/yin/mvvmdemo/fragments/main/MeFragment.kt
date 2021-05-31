@@ -1,4 +1,4 @@
-package com.yin.mvvmdemo.fragments
+package com.yin.mvvmdemo.fragments.main
 
 import android.os.Bundle
 import android.view.LayoutInflater

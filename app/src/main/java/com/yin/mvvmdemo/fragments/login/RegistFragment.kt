@@ -1,21 +1,24 @@
 package com.yin.mvvmdemo.fragments.login
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.EditText
 import android.widget.TextView
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.navArgs
 import com.yin.mvvmdemo.R
+import com.yin.mvvmdemo.activity.MainActivity
 import com.yin.mvvmdemo.bean.User
 
 class RegistFragment : Fragment() {
 
     lateinit var tv: TextView
+    lateinit var etEmail: EditText
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -32,14 +35,16 @@ class RegistFragment : Fragment() {
             activity?.onBackPressed()
         }
         view.findViewById<Button>(R.id.btn_sign_up).setOnClickListener {
-            Toast.makeText(activity, "sign_up", Toast.LENGTH_SHORT).show()
+            context?.startActivity(Intent(context, MainActivity::class.java))
         }
 
         tv = view.findViewById(R.id.tv)
+        etEmail = view.findViewById(R.id.et_email)
 
         val safeArgs: RegistFragmentArgs by navArgs()
         val text = safeArgs.email + ":" + safeArgs.myarg
         tv.setText(text)
+        etEmail.setText(safeArgs.email)
 
         val name = arguments?.getString("name")
         val sex = arguments?.getString("sex")
