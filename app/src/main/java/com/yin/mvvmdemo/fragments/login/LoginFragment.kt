@@ -4,6 +4,9 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import android.widget.TextView
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.yin.mvvmdemo.R
 
@@ -13,6 +16,18 @@ class LoginFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
         return inflater.inflate(R.layout.fragment_login, container, false)
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        view.findViewById<TextView>(R.id.tv_cancel).setOnClickListener {
+            activity?.onBackPressed()
+        }
+        view.findViewById<Button>(R.id.btn_sign_in).setOnClickListener {
+            Toast.makeText(activity, "sign_in", Toast.LENGTH_SHORT).show()
+        }
     }
 }
