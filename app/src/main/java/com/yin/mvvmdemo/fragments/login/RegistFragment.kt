@@ -1,6 +1,5 @@
 package com.yin.mvvmdemo.fragments.login
 
-import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -10,9 +9,10 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import androidx.fragment.app.Fragment
+import androidx.navigation.Navigation
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.yin.mvvmdemo.R
-import com.yin.mvvmdemo.activity.MainActivity
 import com.yin.mvvmdemo.bean.User
 
 class RegistFragment : Fragment() {
@@ -32,10 +32,10 @@ class RegistFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         view.findViewById<TextView>(R.id.tv_cancel).setOnClickListener {
-            activity?.onBackPressed()
+            Navigation.findNavController(it).navigateUp()
         }
         view.findViewById<Button>(R.id.btn_sign_up).setOnClickListener {
-            context?.startActivity(Intent(context, MainActivity::class.java))
+            findNavController().navigate(R.id.action_register_to_register_next, null)
         }
 
         tv = view.findViewById(R.id.tv)

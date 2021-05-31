@@ -31,14 +31,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e01fd035-7a9e-4453-8af1-c4f41f231621" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yin/mvvmdemo/fragments/login/LoginFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yin/mvvmdemo/fragments/login/LoginFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yin/mvvmdemo/fragments/login/RegistFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yin/mvvmdemo/fragments/login/RegistFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yin/mvvmdemo/fragments/login/WelComeFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yin/mvvmdemo/fragments/login/WelComeFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-v21/shape_btn.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-v21/shape_btn_login.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/shape_btn.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/shape_btn_login.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_regist.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_regist.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_welcome.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_welcome.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/navigation/login_navigation.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/navigation/login_navigation.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -281,10 +275,10 @@
       <screen x="0" y="0" width="1472" height="864" />
     </state>
     <state x="467" y="179" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1472.864@0.0.1472.864" timestamp="1622304337101" />
-    <state x="93" y="93" width="1286" height="678" key="DiffContextDialog" timestamp="1622391090818">
+    <state x="93" y="93" width="1286" height="678" key="DiffContextDialog" timestamp="1622451313988">
       <screen x="0" y="0" width="1472" height="864" />
     </state>
-    <state x="93" y="93" width="1286" height="678" key="DiffContextDialog/0.0.1472.864@0.0.1472.864" timestamp="1622391090818" />
+    <state x="93" y="93" width="1286" height="678" key="DiffContextDialog/0.0.1472.864@0.0.1472.864" timestamp="1622451313988" />
     <state width="1429" height="239" key="GridCell.Tab.0.bottom" timestamp="1622364809423">
       <screen x="0" y="0" width="1472" height="864" />
     </state>

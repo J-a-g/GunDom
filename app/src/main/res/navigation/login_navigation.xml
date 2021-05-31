@@ -37,6 +37,10 @@
         android:label="RegistFragment"
         tools:layout="@layout/fragment_regist">
 
+        <action
+            android:id="@+id/action_register_to_register_next"
+            app:destination="@id/register_next" />
+
         <argument
             android:name="EMAIL"
             android:defaultValue="2005@qq.com"
@@ -44,9 +48,22 @@
 
         <argument
             android:name="myarg"
-            android:defaultValue="Android!"/>
+            android:defaultValue="Android!" />
         <!-- TODO STEP 11.1 - Add a deep link to www.example.com/{myarg}/ -->
 
         <deepLink app:uri="www.example.com/{myarg}" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/register_next"
+        android:name="com.yin.mvvmdemo.fragments.login.RegistNextFragment"
+        android:label="RegistNextFragment"
+        tools:layout="@layout/fragment_regist_next">
+
+        <action
+            android:id="@+id/action_regist_next_to_welcome"
+            app:destination="@id/welcome"
+            app:popUpTo="@id/welcome"
+            app:popUpToInclusive="true" />
     </fragment>
 </navigation>
