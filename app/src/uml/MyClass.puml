@@ -1,0 +1,87 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+'abstract class AbstractList
+'abstract AbstractCollection
+'interface List
+'interface Collection
+
+'Student extend Person 继承关系
+'Teacher extend Person 继承关系
+Person <|-- Student
+Person <|-- Teacher
+class Person{
+protect String name
+protect int age
+public void move()
+public void say()
+}
+class Student{
+private String studentNo
+public viod study()
+}
+class Teacher{
+private String teacherNo
+public void teach()
+}
+
+'Ship implement Vehicle 接口实现关系
+'MyCar implement Vehicle
+Vehicle <|.. Ship
+Vehicle <|.. MyCar
+interface Vehicle{
+public void move()
+}
+class Ship{
+public void move()
+}
+class MyCar{
+public void move()
+}
+
+'依赖关系
+Car <.. Driver
+class Driver{
+public void drive(Car car)
+}
+'组合关系
+Mouth <--* Head
+class Head{
+private Mouth mouth
+public Head()
+}
+'聚合关系
+Engine <--o Car
+class Car{
+private Engine engine
+public Car(Engine engine)
+public void setEngine(Engine engine)
+}
+'自关联
+Node --> Node : contains
+class Node{
+private Node node
+}
+
+'双向关联
+Customer -- Product
+class Customer{
+private Product product
+}
+class Product{
+private Customer customer
+}
+
+'单向关联
+Address <-- Customer2
+class Customer2{
+private Address address
+}
+
+enum TimeUnit {
+DAYS
+HOURS
+MINUTES
+}
+
+@enduml
