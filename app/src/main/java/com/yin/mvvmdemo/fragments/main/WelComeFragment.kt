@@ -5,20 +5,25 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.navOptions
 import com.yin.mvvmdemo.R
+import com.yin.mvvmdemo.databinding.FragmentWelcomeBinding
 
 class WelComeFragment : Fragment() {
+
+    lateinit var binding: FragmentWelcomeBinding
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-//        val binding = DataBindingUtil.inflate(R.layout.fragment_welcome, container, false)
-        return inflater.inflate(R.layout.fragment_welcome, container, false)
+        binding =
+            DataBindingUtil.inflate(inflater, R.layout.fragment_welcome, container, false)
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -32,12 +37,13 @@ class WelComeFragment : Fragment() {
                 popExit = R.anim.slide_out_right
             }
         }
-        view.findViewById<Button>(R.id.btn_data_binding_basic).setOnClickListener {
+        binding.btnDataBindingBasic.setOnClickListener {
             findNavController().navigate(R.id.action_welcome_to_basic, null, options)
         }
 
-        view.findViewById<Button>(R.id.btn_data_binding_two_way).setOnClickListener {
+        binding.btnDataBindingTwoWay.setOnClickListener {
             findNavController().navigate(R.id.action_welcome_to_two_way, null)
         }
     }
+
 }

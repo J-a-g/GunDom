@@ -16,6 +16,7 @@
             android:background="@drawable/shape_btn_login"
             android:text="基础绑定（BasicFragment）"
             android:textSize="@dimen/txt_big_size"
+            android:onClick="onKK"
             app:layout_constraintBottom_toTopOf="@id/btn_data_binding_two_way"
             app:layout_constraintHeight_default="percent"
             app:layout_constraintHeight_percent="0.1"
