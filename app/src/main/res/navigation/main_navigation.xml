@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/login_navigation"
+    app:startDestination="@id/welcome">
+
+
+    <fragment
+        android:id="@+id/basic"
+        android:name="com.yin.mvvmdemo.fragments.main.BasicFragment"
+        android:label="BasicFragment"
+        tools:layout="@layout/fragment_basic" />
+
+    <fragment
+        android:id="@+id/two_way"
+        android:name="com.yin.mvvmdemo.fragments.main.TwoWayFragment"
+        android:label="TwoWayFragment"
+        tools:layout="@layout/fragment_two_way" />
+
+
+    <fragment
+        android:id="@+id/welcome"
+        android:name="com.yin.mvvmdemo.fragments.main.WelComeFragment"
+        android:label="WelComeFragment"
+        tools:layout="@layout/fragment_welcome">
+        <action
+            android:id="@+id/action_welcome_to_basic"
+            app:destination="@id/basic" />
+        <action
+            android:id="@+id/action_welcome_to_two_way"
+            app:destination="@id/two_way" />
+    </fragment>
+</navigation>

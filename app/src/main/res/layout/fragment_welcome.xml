@@ -5,13 +5,13 @@
     android:layout_height="match_parent">
 
     <Button
-        android:id="@+id/btn_login"
+        android:id="@+id/btn_data_binding_basic"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="@drawable/shape_btn_login"
-        android:text="Have a account ? Login"
+        android:text="基础绑定（BasicFragment）"
         android:textSize="@dimen/txt_big_size"
-        app:layout_constraintBottom_toTopOf="@id/btn_register"
+        app:layout_constraintBottom_toTopOf="@id/btn_data_binding_two_way"
         app:layout_constraintHeight_default="percent"
         app:layout_constraintHeight_percent="0.1"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -21,20 +21,20 @@
         app:layout_constraintWidth_default="percent"
         app:layout_constraintWidth_percent="0.8" />
 
-        <Button
-            android:id="@+id/btn_register"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:background="@drawable/shape_btn_regist"
-            android:text="Join us"
-            android:textSize="@dimen/txt_big_size"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintHeight_default="percent"
-            app:layout_constraintHeight_percent="0.1"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btn_login"
-            app:layout_constraintWidth_default="percent"
-            app:layout_constraintWidth_percent="0.8" />
+    <Button
+        android:id="@+id/btn_data_binding_two_way"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/shape_btn_regist"
+        android:text="双向绑定（TwoWayFragment）"
+        android:textSize="@dimen/txt_big_size"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHeight_default="percent"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_data_binding_basic"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent="0.8" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
