@@ -17,6 +17,7 @@ class WelComeFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+//        val binding = DataBindingUtil.inflate(R.layout.fragment_welcome, container, false)
         return inflater.inflate(R.layout.fragment_welcome, container, false)
     }
 
