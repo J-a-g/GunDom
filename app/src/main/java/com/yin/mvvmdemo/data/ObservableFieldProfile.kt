@@ -24,8 +24,8 @@ import androidx.databinding.ObservableInt
  * one (likes).
  */
 data class ObservableFieldProfile(
-    val name: String,
-    var lastName: ObservableField<String>,
+    var name: String,
+    val lastName: ObservableField<String>,
     val likes: ObservableInt
 ) {
     override fun toString(): String {
