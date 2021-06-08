@@ -25,7 +25,6 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="8dp"
             android:text="@string/name"
-            android:onClick="@{()->user.onCheckUrl()}"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -59,7 +58,7 @@
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
             app:layout_constraintStart_toStartOf="parent"
-            android:onClick="@{()->user.onCheckName()}"
+            android:onClick="@{user::onCheckName}"
             android:text="修改姓名"
             app:layout_constraintTop_toBottomOf="@id/lastname"
             tools:ignore="MissingConstraints" />

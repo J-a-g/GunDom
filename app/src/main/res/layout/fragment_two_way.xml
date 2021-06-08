@@ -20,21 +20,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <EditText
-            android:id="@+id/et_date"
-            textDate="@={MyTestConverters.longToString(context, twoway.currentTime)}"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:gravity="center"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintWidth_percent="0.5"
-            tools:ignore="MissingConstraints" />
-
-
         <ToggleButton
             android:id="@+id/toggle_btn"
             android:layout_width="0dp"
@@ -70,10 +55,24 @@
             app:layout_constraintWidth_percent="0.8"
             tools:ignore="MissingConstraints" />
 
+        <EditText
+            android:id="@+id/et_date"
+            textDate="@={MyTestConverters.longToString(context, twoway.currentTime)}"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.5"
+            tools:ignore="MissingConstraints" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@{@string/click_status + String.valueOf(twoway.click) + @string/xml_date + MyTestConverters.longToString(context, twoway.currentTime) + @string/xml_date_stamp + String.valueOf(twoway.currentTime)}"
+            android:text="@{@string/click_status + String.valueOf(twoway.click) + @string/xml_date + etDate.text + @string/xml_date_stamp + String.valueOf(twoway.currentTime)}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/et_date"

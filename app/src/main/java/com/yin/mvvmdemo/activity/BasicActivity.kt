@@ -47,8 +47,6 @@ class BasicActivity : AppCompatActivity() {
     }
 
     fun onLike(view: View) {
-        user.lastName.set("孔")
-        user.name = "雪蒙"
         user.likes.set(user.likes.get() + 1)
         Toast.makeText(this, "onLike", Toast.LENGTH_SHORT).show()
     }

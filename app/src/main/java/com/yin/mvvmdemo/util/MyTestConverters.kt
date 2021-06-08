@@ -33,11 +33,9 @@ object MyEditDateTextBindingAdapter {
     fun setListener(view: EditText, listener: InverseBindingListener?) {
         view.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
-//                Log.w("scj", "beforeTextChanged...")
             }
 
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-//                Log.w("scj", "onTextChanged...")
             }
 
             override fun afterTextChanged(s: Editable?) {
@@ -57,6 +55,7 @@ object MyEditDateTextBindingAdapter {
 
 object MyTestConverters {
 
+    //转换器：作用将Long转换成yyyy-MM-dd HH:mm:ss格式的字符串，设置到视图控件上
     @InverseMethod("stringToLong")
     @JvmStatic
     fun longToString(context: Context, currentTime: Long): String {
@@ -64,6 +63,7 @@ object MyTestConverters {
         return TimeUitl.stampToTime(currentTime)
     }
 
+    //反向转换器：作用将yyyy-MM-dd HH:mm:ss格式的字符串转换成Long，设置到数据源上
     @JvmStatic
     fun stringToLong(context: Context, timers: String): Long {
         Log.w("scj", "stringToLong")

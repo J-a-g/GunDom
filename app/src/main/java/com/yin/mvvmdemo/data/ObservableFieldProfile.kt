@@ -33,7 +33,7 @@ data class ObservableFieldProfile(
     val url: ObservableField<String>
 ) {
 
-    fun onCheckName() {
+    fun onCheckName(view :View) {
         lastName.set("孔")
         name = "乙己"
     }
