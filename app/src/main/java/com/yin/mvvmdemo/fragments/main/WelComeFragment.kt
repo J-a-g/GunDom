@@ -55,7 +55,6 @@ class WelComeFragment : Fragment() {
     }
 
     fun onClickTest(view: View) {
-        Toast.makeText(activity, "onClickTest", Toast.LENGTH_SHORT).show()
         findNavController().navigate(R.id.action_welcome_to_basic, null)
     }
 }

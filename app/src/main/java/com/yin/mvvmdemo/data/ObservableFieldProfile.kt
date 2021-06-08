@@ -16,6 +16,9 @@
 
 package com.yin.mvvmdemo.data
 
+import android.util.Log
+import android.view.View
+import android.widget.Toast
 import androidx.databinding.ObservableField
 import androidx.databinding.ObservableInt
 
@@ -26,9 +29,25 @@ import androidx.databinding.ObservableInt
 data class ObservableFieldProfile(
     var name: String,
     val lastName: ObservableField<String>,
-    val likes: ObservableInt
+    val likes: ObservableInt,
+    val url: ObservableField<String>
 ) {
+
+    fun onCheckName() {
+        lastName.set("孔")
+        name = "乙己"
+    }
+
+    fun onCheckUrl() {
+        Log.w("scj", "onCheckUrl")
+        url.set("http://192.168.1.104/TestDemo2/img_test2.png")
+    }
+
+    fun onLike(view: View) {
+        likes.set(likes.get() + 1)
+    }
+
     override fun toString(): String {
-        return "ObservableFieldProfile(name='$name', lastName='$lastName', likes=${likes.get()})"
+        return "ObservableFieldProfile(name='$name', lastName=$lastName, likes=$likes, url=$url)"
     }
 }

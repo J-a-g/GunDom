@@ -38,7 +38,7 @@ import android.widget.ImageView
  * ```
  */
 
-//TODO 注意？？
+//TODO
 @BindingMethods(
         BindingMethod(type = ImageView::class,
                 attribute = "app:srcTest",

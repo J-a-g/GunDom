@@ -7,11 +7,22 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
+import androidx.databinding.ObservableField
+import androidx.databinding.ObservableInt
 import androidx.fragment.app.Fragment
 import com.yin.mvvmdemo.R
+import com.yin.mvvmdemo.data.ObservableFieldProfile
 import com.yin.mvvmdemo.databinding.FragmentBasicBinding
 
 class BasicFragment : Fragment() {
+
+
+    val user: ObservableFieldProfile = ObservableFieldProfile(
+        "大强",
+        ObservableField("苏"),
+        ObservableInt(0),
+        ObservableField("http://192.168.1.104/TestDemo2/img_test.jpg")
+    )
 
     lateinit var binding: FragmentBasicBinding
     override fun onCreateView(
@@ -20,6 +31,7 @@ class BasicFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_basic, container, false)
+        binding.user = user
         return binding.root
     }
 
