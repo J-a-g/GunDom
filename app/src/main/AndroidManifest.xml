@@ -21,6 +21,7 @@
             <nav-graph android:value="@navigation/main_navigation" />
         </activity>
         <activity android:name=".activity.BasicActivity"/>
+        <activity android:name=".step1.ViewModelActivity"/>
     </application>
 
 </manifest>

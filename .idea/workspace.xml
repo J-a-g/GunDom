@@ -44,13 +44,19 @@
       <change beforePath="$PROJECT_DIR$/.gradle/5.6.4/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.4/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_arch_core_core_runtime_2_0_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_common_2_1_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_livedata_2_0_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_livedata_core_2_0_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_viewmodel_2_1_0_aar.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules/app/MvvmDemo.app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/app/MvvmDemo.app.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yin/mvvmdemo/activity/BasicActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yin/mvvmdemo/activity/BasicActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yin/mvvmdemo/data/ObservableFieldProfile.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yin/mvvmdemo/data/ObservableFieldProfile.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yin/mvvmdemo/activity/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yin/mvvmdemo/activity/MainActivity.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yin/mvvmdemo/data/TwoWayData.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yin/mvvmdemo/data/TwoWayData.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yin/mvvmdemo/util/BindingAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yin/mvvmdemo/util/BindingAdapter.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yin/mvvmdemo/util/MyTestConverters.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yin/mvvmdemo/util/MyTestConverters.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_basic.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_basic.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_two_way.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_two_way.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -79,9 +85,9 @@
         <option value="Kotlin Interface" />
         <option value="Kotlin File" />
         <option value="Kotlin Object" />
-        <option value="Kotlin Class" />
         <option value="Class" />
         <option value="layoutResourceFile" />
+        <option value="Kotlin Class" />
       </list>
     </option>
   </component>
@@ -96,13 +102,14 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="SerialNumber@127.0.0.1:62001" />
-    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2021-06-05T14:31:04.703434Z" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="VirtualDevicePath@C:\Android\.android\avd\Pixel_XL_API_28.avd" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2021-06-08T15:29:48.864799700Z" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="android-custom-viewC:/Users/suche/.gradle/caches/modules-2/files-2.1/androidx.drawerlayout/drawerlayout/1.0.0/9ecd4ecb7da215ba4c5c3e00bf8d290dad6f2bc5/drawerlayout-1.0.0-sources.jar!/androidx/drawerlayout/widget/DrawerLayout.java_SELECTED" value="DrawerLayout" />
+    <property name="android-custom-viewD:/Android/Sdk/sources/android-29/android/widget/Chronometer.java_SELECTED" value="Chronometer" />
     <property name="android.sdk.path" value="$PROJECT_DIR$/../../sdk" />
     <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/java/com/yin/mvvmdemo/util" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/res/layout" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RecentsManager">
@@ -116,9 +123,9 @@
       <recent name="com.yin.mvvmdemo.activity" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Android\AndroidStudioProjects\MvvmDemo\app\src\main\res\layout" />
       <recent name="D:\Android\AndroidStudioProjects\MvvmDemo\app\src\main\java\com\yin\mvvmdemo\util" />
       <recent name="D:\Android\AndroidStudioProjects\MvvmDemo\app\src\main\res\drawable" />
-      <recent name="D:\Android\AndroidStudioProjects\MvvmDemo\app\src\main\res\layout" />
       <recent name="D:\Android\AndroidStudioProjects\MvvmDemo\app\src\main\res\menu" />
       <recent name="D:\Android\AndroidStudioProjects\MvvmDemo\app\src\main\res" />
     </key>
@@ -302,10 +309,10 @@
       <screen x="0" y="0" width="1472" height="864" />
     </state>
     <state x="509" y="133" key="#com.intellij.ide.util.MemberChooser/0.0.1472.864@0.0.1472.864" timestamp="1623145196101" />
-    <state x="467" y="179" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1622823840307">
+    <state x="467" y="179" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1623231445934">
       <screen x="0" y="0" width="1472" height="864" />
     </state>
-    <state x="467" y="179" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1472.864@0.0.1472.864" timestamp="1622823840307" />
+    <state x="467" y="179" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1472.864@0.0.1472.864" timestamp="1623231445934" />
     <state x="509" y="221" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog" timestamp="1622907252601">
       <screen x="0" y="0" width="1472" height="864" />
     </state>
@@ -318,17 +325,33 @@
       <screen x="0" y="0" width="1472" height="864" />
     </state>
     <state x="568" y="222" key="AndroidCreateXmlResourceDialog/0.0.1472.864@0.0.1472.864" timestamp="1623054094242" />
-    <state x="93" y="93" width="1286" height="678" key="DiffContextDialog" timestamp="1623166099962">
+    <state x="93" y="93" width="1286" height="678" key="DiffContextDialog" timestamp="1623248776134">
       <screen x="0" y="0" width="1472" height="864" />
     </state>
-    <state x="93" y="93" width="1286" height="678" key="DiffContextDialog/0.0.1472.864@0.0.1472.864" timestamp="1623166099962" />
+    <state x="93" y="93" width="1286" height="678" key="DiffContextDialog/0.0.1472.864@0.0.1472.864" timestamp="1623248776134" />
+    <state width="1429" height="516" key="GridCell.Tab.0.bottom" timestamp="1623247164204">
+      <screen x="0" y="0" width="1472" height="864" />
+    </state>
+    <state width="1429" height="516" key="GridCell.Tab.0.bottom/0.0.1472.864@0.0.1472.864" timestamp="1623247164204" />
+    <state width="1429" height="516" key="GridCell.Tab.0.center" timestamp="1623247164204">
+      <screen x="0" y="0" width="1472" height="864" />
+    </state>
+    <state width="1429" height="516" key="GridCell.Tab.0.center/0.0.1472.864@0.0.1472.864" timestamp="1623247164204" />
+    <state width="1429" height="516" key="GridCell.Tab.0.left" timestamp="1623247164204">
+      <screen x="0" y="0" width="1472" height="864" />
+    </state>
+    <state width="1429" height="516" key="GridCell.Tab.0.left/0.0.1472.864@0.0.1472.864" timestamp="1623247164204" />
+    <state width="1429" height="516" key="GridCell.Tab.0.right" timestamp="1623247164204">
+      <screen x="0" y="0" width="1472" height="864" />
+    </state>
+    <state width="1429" height="516" key="GridCell.Tab.0.right/0.0.1472.864@0.0.1472.864" timestamp="1623247164204" />
     <state x="436" y="164" width="682" height="536" key="find.popup" timestamp="1623154932654">
       <screen x="0" y="0" width="1472" height="864" />
     </state>
     <state x="436" y="164" width="682" height="536" key="find.popup/0.0.1472.864@0.0.1472.864" timestamp="1623154932654" />
-    <state x="399" y="181" width="672" height="678" key="search.everywhere.popup" timestamp="1623123453156">
+    <state x="399" y="181" width="672" height="678" key="search.everywhere.popup" timestamp="1623247575098">
       <screen x="0" y="0" width="1472" height="864" />
     </state>
-    <state x="399" y="181" width="672" height="678" key="search.everywhere.popup/0.0.1472.864@0.0.1472.864" timestamp="1623123453156" />
+    <state x="399" y="181" width="672" height="678" key="search.everywhere.popup/0.0.1472.864@0.0.1472.864" timestamp="1623247575098" />
   </component>
 </project>

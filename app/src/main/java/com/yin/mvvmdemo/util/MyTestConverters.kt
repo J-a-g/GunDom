@@ -17,20 +17,22 @@ object MyEditDateTextBindingAdapter {
     @BindingAdapter("textDate")
     @JvmStatic
     fun setTextDate(view: EditText, value: String) {
-        Log.w("scj", "setTextDate")
+        Log.w("suchengjian", "setTextDate")
         view.setText(value)
     }
 
     @InverseBindingAdapter(attribute = "textDate")
     @JvmStatic
     fun getTextDate(view: EditText): String {
-        Log.w("scj", "getTextDate")
+        Log.w("suchengjian", "getTextDate")
         return view.text.toString()
     }
 
     @BindingAdapter("textDateAttrChanged")
     @JvmStatic
     fun setListener(view: EditText, listener: InverseBindingListener?) {
+        Log.w("suchengjian", "setListener")
+//        listener?.onChange()
         view.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
             }
@@ -44,6 +46,7 @@ object MyEditDateTextBindingAdapter {
                     "[0-9]{4}-[0-9]{2}-[0-9]{2} [0-9]{2}:[0-9]{2}:[0-9]{2}" ////yyyy-MM-dd HH:mm:ss
                 val btmp = Pattern.compile(regex).matcher(s.toString()).matches()
                 if (btmp) {
+                    Log.w("suchengjian", "listener?.onChange()")
                     listener?.onChange()
                 }
             }
@@ -59,14 +62,14 @@ object MyTestConverters {
     @InverseMethod("stringToLong")
     @JvmStatic
     fun longToString(context: Context, currentTime: Long): String {
-        Log.w("scj", "longToString")
+        Log.w("suchengjian", "longToString")
         return TimeUitl.stampToTime(currentTime)
     }
 
     //反向转换器：作用将yyyy-MM-dd HH:mm:ss格式的字符串转换成Long，设置到数据源上
     @JvmStatic
     fun stringToLong(context: Context, timers: String): Long {
-        Log.w("scj", "stringToLong")
+        Log.w("suchengjian", "stringToLong")
         val result: Long = TimeUitl.timeToStamp(timers)
         val n: Int = 0
         if (result == n.toLong()) {

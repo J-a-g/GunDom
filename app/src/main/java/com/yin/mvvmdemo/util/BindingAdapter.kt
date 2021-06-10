@@ -1,12 +1,19 @@
 package com.yin.mvvmdemo.util
 
 import android.graphics.drawable.Drawable
+import android.text.Editable
+import android.text.TextWatcher
 import android.util.Log
+import android.widget.Chronometer
+import android.widget.EditText
 import android.widget.ImageView
 import android.widget.ProgressBar
 import androidx.databinding.BindingAdapter
+import androidx.databinding.InverseBindingAdapter
+import androidx.databinding.InverseBindingListener
 import com.bumptech.glide.Glide
 import com.yin.mvvmdemo.R
+import java.util.regex.Pattern
 
 object BindingAdapter {
 
@@ -36,4 +43,12 @@ object BindingAdapter {
         }
     }
 
+    //////////////////////////
+    @BindingAdapter("baseValue")
+    @JvmStatic
+    fun setBaseValue(view: Chronometer, time: Long) {
+        Log.w("scj", "setBaseValue time: " + time)
+        view.base = time
+        view.start()
+    }
 }

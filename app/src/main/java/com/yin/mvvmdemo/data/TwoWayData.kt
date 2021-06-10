@@ -9,20 +9,20 @@ class TwoWayData : BaseObservable() {
 
     var click: Boolean = false
         @Bindable get() {
-            Log.w("scj", "click get")
             return field
         }
         set(value: Boolean) {
-            Log.w("scj", "click set")
             field = value
             notifyPropertyChanged(BR.click)
         }
 
     var currentTime: Long = System.currentTimeMillis()
         @Bindable get() {
+            Log.w("suchengjian", "currentTime get")
             return field
         }
         set(value) {
+            Log.w("suchengjian", "currentTime set")
             if (field != value) {
                 field = value
                 if (value > 0) {
