@@ -50,10 +50,21 @@ dependencies {
 //    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
 //    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
     def lifecycle_version = "2.3.1"
-    // ViewModel
-    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
-    // LiveData
-    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version"
+    def savedStateVersion = '2.2.0'
+    def lifecycleVersion = '2.0.0'
+    def lifecycleExtensionsVersion = '2.2.0'
+
+    implementation "androidx.lifecycle:lifecycle-extensions:$lifecycleExtensionsVersion"
+
+    annotationProcessor "androidx.lifecycle:lifecycle-compiler:$lifecycleVersion"
+
+//    // ViewModel
+//    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
+//    // LiveData
+//    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version"
+
+    //Step5 save state
+    implementation "androidx.lifecycle:lifecycle-viewmodel-savedstate:$savedStateVersion"
 
     implementation "com.google.android.material:material:$rootProject.materialVersion"
     //Navigation
