@@ -23,14 +23,13 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-            <nav-graph android:value="@navigation/main_navigation" />
         </activity>
-        <activity android:name=".activity.BasicActivity" />
         <activity android:name=".step1.ViewModelActivity" />
         <activity android:name=".step2.LiveDataActivity" />
         <activity android:name=".step3.LifecycleProviderActivity" />
         <activity android:name=".step4.ShareActivity" />
         <activity android:name=".step5.SaveStateActivity" />
+        <activity android:name=".step3.MyLifecycleActivity"/>
     </application>
 
 </manifest>

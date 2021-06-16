@@ -25,23 +25,18 @@ class SeekBarFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_seek_bar, container, false)
-//        seekBarViewModel = SeekBarViewModel()
+
         seekBarViewModel = ViewModelProvider(requireActivity()).get(SeekBarViewModel::class.java)
 
         subscribeSeekBar()
         return binding.root
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-
-    }
-
     fun subscribeSeekBar() {
         binding.sb.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
             override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
                 if(fromUser){
-                    Log.d("scj", "Progress changed! hascode:" + binding.sb.hashCode())
+                    //修改ViewModel中LiveData的值，会通知到onChanged中
                     seekBarViewModel.seekbarValue.value = progress
                 }
             }
@@ -54,13 +49,14 @@ class SeekBarFragment : Fragment() {
 
         })
 
-        Log.w("scj", "seekBarViewModel->" + seekBarViewModel.hashCode())
-        seekBarViewModel.seekbarValue.observe(requireActivity(),
-            Observer<Int> { t ->
-                if(t != null){
-                    Log.w("scj", "" + binding.sb.hashCode() + " onChanged value:" + t)
+        seekBarViewModel.seekbarValue.observe(requireActivity(),object : Observer<Int>{
+            override fun onChanged(t: Int?) {
+                if (t != null) {
+                    //更新UI
                     binding.sb.progress = t
                 }
-            })
+            }
+
+        })
     }
 }

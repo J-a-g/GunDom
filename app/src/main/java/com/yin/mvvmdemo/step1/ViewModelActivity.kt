@@ -15,10 +15,7 @@ class ViewModelActivity : AppCompatActivity() {
         val binding: ActivityViewModelBinding =
             DataBindingUtil.setContentView(this, R.layout.activity_view_model)
         val chronometerViewModel = ViewModelProvider(this).get(ChronometerViewModel::class.java)
-
-//        val chronometerViewModel = ChronometerViewModel()
         binding.chronometerviewmodel = chronometerViewModel
-
         chronometerViewModel.startTime()
     }
 }

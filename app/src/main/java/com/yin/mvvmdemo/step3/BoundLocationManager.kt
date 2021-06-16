@@ -11,6 +11,7 @@ object BoundLocationManager {
         listener: LocationListener,
         mcontext: Context
     ): BoundLocationListener {
+        MyListener(lifecycleOwner)
         return BoundLocationListener(lifecycleOwner, listener, mcontext)
     }
 }

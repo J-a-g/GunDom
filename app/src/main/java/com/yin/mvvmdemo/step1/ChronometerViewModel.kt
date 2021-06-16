@@ -15,10 +15,11 @@ class ChronometerViewModel : ViewModel() {
     fun startTime(){
         val n = 0
         if(startTime?.get() == n.toLong() || startTime == null){
-            Log.w("scj", "11111111")
             startTime = ObservableLong(SystemClock.elapsedRealtime())
-        }else{
-            Log.w("scj", "2222222")
         }
+    }
+
+    override fun onCleared() {
+        super.onCleared()
     }
 }

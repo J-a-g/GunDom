@@ -43,30 +43,38 @@
       <change beforePath="$PROJECT_DIR$/.gradle/5.6.4/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.4/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_activity_activity_1_0_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_fragment_fragment_1_1_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_runtime_2_1_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/app/MvvmDemo.app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/app/MvvmDemo.app.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yin/mvvmdemo/activity/BasicActivity.kt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yin/mvvmdemo/activity/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yin/mvvmdemo/activity/MainActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yin/mvvmdemo/data/ObservableFieldProfile.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yin/mvvmdemo/data/TwoWayData.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yin/mvvmdemo/fragments/main/BasicFragment.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yin/mvvmdemo/fragments/main/TwoWayFragment.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yin/mvvmdemo/fragments/main/WelComeFragment.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yin/mvvmdemo/step1/ChronometerViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yin/mvvmdemo/step1/ChronometerViewModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yin/mvvmdemo/step1/ViewModelActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yin/mvvmdemo/step1/ViewModelActivity.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yin/mvvmdemo/step2/LiveDataActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yin/mvvmdemo/step2/LiveDataActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yin/mvvmdemo/step2/LiveDataTimerViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yin/mvvmdemo/step2/LiveDataTimerViewModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yin/mvvmdemo/step3/BoundLocationListener.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yin/mvvmdemo/step3/BoundLocationListener.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yin/mvvmdemo/step3/BoundLocationManager.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yin/mvvmdemo/step3/BoundLocationManager.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yin/mvvmdemo/step3/LifecycleProviderActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yin/mvvmdemo/step3/LifecycleProviderActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yin/mvvmdemo/step4/SeekBarFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yin/mvvmdemo/step4/SeekBarFragment.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yin/mvvmdemo/step5/SaveStateActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yin/mvvmdemo/step5/SaveStateActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_lifecycle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_lifecycle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_basic.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_live_data.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_live_data.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_save_state.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_save_state.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_share.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_share.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_basic.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_two_way.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_welcome.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/navigation/main_navigation.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[VirtualDevicePath@C:\Android\.android\avd\Pixel_XL_API_28.avd]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[SerialNumber@46f4add7]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -86,10 +94,11 @@
         <option value="resourceFile" />
         <option value="Kotlin Interface" />
         <option value="Kotlin File" />
-        <option value="Class" />
         <option value="Kotlin Object" />
         <option value="layoutResourceFile" />
+        <option value="Kotlin Data Class" />
         <option value="Kotlin Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -307,14 +316,14 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="509" y="133" key="#com.intellij.ide.util.MemberChooser" timestamp="1623380462287">
+    <state x="509" y="133" key="#com.intellij.ide.util.MemberChooser" timestamp="1623764629185">
       <screen x="0" y="0" width="1472" height="864" />
     </state>
-    <state x="509" y="133" key="#com.intellij.ide.util.MemberChooser/0.0.1472.864@0.0.1472.864" timestamp="1623380462287" />
-    <state x="467" y="179" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1623231445934">
+    <state x="509" y="133" key="#com.intellij.ide.util.MemberChooser/0.0.1472.864@0.0.1472.864" timestamp="1623764629185" />
+    <state x="467" y="179" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1623815927230">
       <screen x="0" y="0" width="1472" height="864" />
     </state>
-    <state x="467" y="179" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1472.864@0.0.1472.864" timestamp="1623231445934" />
+    <state x="467" y="179" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1472.864@0.0.1472.864" timestamp="1623815927230" />
     <state x="509" y="221" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog" timestamp="1622907252601">
       <screen x="0" y="0" width="1472" height="864" />
     </state>
@@ -327,37 +336,37 @@
       <screen x="0" y="0" width="1472" height="864" />
     </state>
     <state x="568" y="222" key="AndroidCreateXmlResourceDialog/0.0.1472.864@0.0.1472.864" timestamp="1623054094242" />
-    <state x="93" y="93" width="1286" height="678" key="DiffContextDialog" timestamp="1623297103332">
+    <state x="93" y="93" width="1286" height="678" maximized="true" key="DiffContextDialog" timestamp="1623815972195">
       <screen x="0" y="0" width="1472" height="864" />
     </state>
-    <state x="93" y="93" width="1286" height="678" key="DiffContextDialog/0.0.1472.864@0.0.1472.864" timestamp="1623297103332" />
+    <state x="93" y="93" width="1286" height="678" maximized="true" key="DiffContextDialog/0.0.1472.864@0.0.1472.864" timestamp="1623815972195" />
     <state x="517" y="187" key="FileChooserDialogImpl" timestamp="1623315864492">
       <screen x="0" y="0" width="1472" height="864" />
     </state>
     <state x="517" y="187" key="FileChooserDialogImpl/0.0.1472.864@0.0.1472.864" timestamp="1623315864492" />
-    <state width="1429" height="375" key="GridCell.Tab.0.bottom" timestamp="1623382781780">
+    <state width="1429" height="52" key="GridCell.Tab.0.bottom" timestamp="1623815752447">
       <screen x="0" y="0" width="1472" height="864" />
     </state>
-    <state width="1429" height="375" key="GridCell.Tab.0.bottom/0.0.1472.864@0.0.1472.864" timestamp="1623382781780" />
-    <state width="1429" height="375" key="GridCell.Tab.0.center" timestamp="1623382781780">
+    <state width="1429" height="52" key="GridCell.Tab.0.bottom/0.0.1472.864@0.0.1472.864" timestamp="1623815752447" />
+    <state width="1429" height="52" key="GridCell.Tab.0.center" timestamp="1623815752447">
       <screen x="0" y="0" width="1472" height="864" />
     </state>
-    <state width="1429" height="375" key="GridCell.Tab.0.center/0.0.1472.864@0.0.1472.864" timestamp="1623382781780" />
-    <state width="1429" height="375" key="GridCell.Tab.0.left" timestamp="1623382781779">
+    <state width="1429" height="52" key="GridCell.Tab.0.center/0.0.1472.864@0.0.1472.864" timestamp="1623815752447" />
+    <state width="1429" height="52" key="GridCell.Tab.0.left" timestamp="1623815752447">
       <screen x="0" y="0" width="1472" height="864" />
     </state>
-    <state width="1429" height="375" key="GridCell.Tab.0.left/0.0.1472.864@0.0.1472.864" timestamp="1623382781779" />
-    <state width="1429" height="375" key="GridCell.Tab.0.right" timestamp="1623382781780">
+    <state width="1429" height="52" key="GridCell.Tab.0.left/0.0.1472.864@0.0.1472.864" timestamp="1623815752447" />
+    <state width="1429" height="52" key="GridCell.Tab.0.right" timestamp="1623815752447">
       <screen x="0" y="0" width="1472" height="864" />
     </state>
-    <state width="1429" height="375" key="GridCell.Tab.0.right/0.0.1472.864@0.0.1472.864" timestamp="1623382781780" />
-    <state x="436" y="164" width="682" height="536" key="find.popup" timestamp="1623154932654">
+    <state width="1429" height="52" key="GridCell.Tab.0.right/0.0.1472.864@0.0.1472.864" timestamp="1623815752447" />
+    <state x="436" y="164" width="682" height="536" key="find.popup" timestamp="1623815965516">
       <screen x="0" y="0" width="1472" height="864" />
     </state>
-    <state x="436" y="164" width="682" height="536" key="find.popup/0.0.1472.864@0.0.1472.864" timestamp="1623154932654" />
-    <state x="399" y="181" width="672" height="678" key="search.everywhere.popup" timestamp="1623315781944">
+    <state x="436" y="164" width="682" height="536" key="find.popup/0.0.1472.864@0.0.1472.864" timestamp="1623815965516" />
+    <state x="399" y="181" width="672" height="678" key="search.everywhere.popup" timestamp="1623808401356">
       <screen x="0" y="0" width="1472" height="864" />
     </state>
-    <state x="399" y="181" width="672" height="678" key="search.everywhere.popup/0.0.1472.864@0.0.1472.864" timestamp="1623315781944" />
+    <state x="399" y="181" width="672" height="678" key="search.everywhere.popup/0.0.1472.864@0.0.1472.864" timestamp="1623808401356" />
   </component>
 </project>

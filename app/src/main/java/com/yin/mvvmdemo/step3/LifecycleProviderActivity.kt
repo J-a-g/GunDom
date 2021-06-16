@@ -6,6 +6,8 @@ import android.content.pm.PackageManager
 import android.location.Location
 import android.location.LocationListener
 import android.os.Bundle
+import android.os.SystemClock
+import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
@@ -41,7 +43,7 @@ class LifecycleProviderActivity : AppCompatActivity() {
         binding =
             DataBindingUtil.setContentView(this, R.layout.activity_lifecycle)
         mGpsListener = MyLocationListener(this, binding!!)
-
+        Log.w("scj", "Activity onCreate")
         if (ActivityCompat.checkSelfPermission(
                 this,
                 Manifest.permission.ACCESS_FINE_LOCATION
@@ -62,7 +64,26 @@ class LifecycleProviderActivity : AppCompatActivity() {
         } else {
             bindLocationListener()
         }
+    }
 
+    override fun onStart() {
+        super.onStart()
+        Log.w("scj", "Activity onStart")
+    }
+
+    override fun onResume() {
+        super.onResume()
+        Log.w("scj", "Activity onResume")
+    }
+
+    override fun onPause() {
+        super.onPause()
+        Log.w("scj", "Activity onPause")
+    }
+
+    override fun onStop() {
+        super.onStop()
+        Log.w("scj", "Activity onStop")
     }
 
     fun bindLocationListener() {

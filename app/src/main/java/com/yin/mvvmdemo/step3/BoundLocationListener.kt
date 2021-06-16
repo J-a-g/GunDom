@@ -28,10 +28,9 @@ class BoundLocationListener(
         lifecycleOwner.lifecycle.addObserver(this)
     }
 
-
     @OnLifecycleEvent(Lifecycle.Event.ON_RESUME)
     fun addLocationListener() {
-        Log.w("scj", "addLocationListener")
+        Log.w("scj", "ON_RESUME")
         locationManager = context?.getSystemService(Context.LOCATION_SERVICE) as LocationManager?
 
         if (context?.let {
@@ -66,6 +65,7 @@ class BoundLocationListener(
 
     @OnLifecycleEvent(Lifecycle.Event.ON_PAUSE)
     fun removeLocationListener(){
+        Log.w("scj", "ON_PAUSE")
         if(locationManager == null){
             return
         }
