@@ -55,20 +55,18 @@ dependencies {
     def lifecycleExtensionsVersion = '2.2.0'
 
     implementation "androidx.lifecycle:lifecycle-extensions:$lifecycleExtensionsVersion"
-
     annotationProcessor "androidx.lifecycle:lifecycle-compiler:$lifecycleVersion"
 
-//    // ViewModel
-//    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
-//    // LiveData
-//    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version"
+    def room_version = "2.3.0"
 
-    //Step5 save state
+    implementation "androidx.room:room-runtime:$room_version"
+    kapt("androidx.room:room-compiler:$room_version")
+
     implementation "androidx.lifecycle:lifecycle-viewmodel-savedstate:$savedStateVersion"
 
     implementation "com.google.android.material:material:$rootProject.materialVersion"
     //Navigation
-    implementation "androidx.navigation:navigation-fragment-ktx:$rootProject.navigationVersion"
-    implementation "androidx.navigation:navigation-ui-ktx:$rootProject.navigationVersion"
-    implementation 'com.github.bumptech.glide:glide:4.12.0'
+//    implementation "androidx.navigation:navigation-fragment-ktx:$rootProject.navigationVersion"
+//    implementation "androidx.navigation:navigation-ui-ktx:$rootProject.navigationVersion"
+//    implementation 'com.github.bumptech.glide:glide:4.12.0'
 }

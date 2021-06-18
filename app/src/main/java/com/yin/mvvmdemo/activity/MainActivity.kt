@@ -2,38 +2,47 @@ package com.yin.mvvmdemo.activity
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.ViewModelProvider
 import com.yin.mvvmdemo.R
-import com.yin.mvvmdemo.databinding.ActivityMain1Binding
-import com.yin.mvvmdemo.step1.ViewModelActivity
-import com.yin.mvvmdemo.step2.LiveDataActivity
-import com.yin.mvvmdemo.step3.LifecycleProviderActivity
-import com.yin.mvvmdemo.step3.MyLifecycleActivity
-import com.yin.mvvmdemo.step4.ShareActivity
-import com.yin.mvvmdemo.step5.SaveStateActivity
+import com.yin.mvvmdemo.adapter.UserAdapter
+import com.yin.mvvmdemo.databinding.ActivityMainBinding
+import com.yin.mvvmdemo.db.AppDatabase
+import com.yin.mvvmdemo.viewmodel.MainViewModel
+import com.yin.mvvmdemo.viewmodel.User
 
 class MainActivity : AppCompatActivity() {
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        val binding: ActivityMain1Binding =
-            DataBindingUtil.setContentView(this, R.layout.activity_main1)
+    private val mainViewModel by lazy {
+        ViewModelProvider(this).get(MainViewModel::class.java)
+    }
+    private val binding by lazy {
+        DataBindingUtil.setContentView<ActivityMainBinding>(this, R.layout.activity_main)
     }
 
-    fun onClick(view: View) {
-        if (view.id == R.id.btn_step1) {
-            startActivity(Intent(this, ViewModelActivity::class.java))
-        } else if (view.id == R.id.btn_step2) {
-            startActivity(Intent(this, LiveDataActivity::class.java))
-        } else if (view.id == R.id.btn_step3) {
-            startActivity(Intent(this, LifecycleProviderActivity::class.java))
-//            startActivity(Intent(this, MyLifecycleActivity::class.java))
-        } else if (view.id == R.id.btn_step4) {
-            startActivity(Intent(this, ShareActivity::class.java))
-        } else if (view.id == R.id.btn_step5) {
-            startActivity(Intent(this, SaveStateActivity::class.java))
+    private val userAdapter by lazy {
+        Log.w("scj", "1111111111")
+        val users: MutableList<User> = ArrayList()
+        for (i in 0..100) {
+            users.add(User("suc" + i))
         }
+        UserAdapter(users)
+    }
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        binding.run {
+            lifecycleOwner = this@MainActivity
+            viewModel = mainViewModel
+            adapter = userAdapter
+        }
+
+//        with(binding.recyclerView){
+//            adapter = userAdapter
+//        }
     }
 }
