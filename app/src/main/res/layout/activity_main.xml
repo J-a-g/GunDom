@@ -7,7 +7,7 @@
 
         <variable
             name="adapter"
-            type="com.yin.mvvmdemo.adapter.UserAdapter" />
+            type="com.yin.mvvmdemo.ui.adapter.UserAdapter" />
 
         <variable
             name="viewModel"

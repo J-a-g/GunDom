@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="framgnet"
+            type="com.yin.mvvmdemo.ui.fragments.login.WelComeFragment" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="fragment_welcome"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <Button
+            android:id="@+id/btn_regist"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="@string/regist"
+            android:onClick="@{framgnet::onTest}"
+            app:layout_constraintBottom_toTopOf="@id/btn_login"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.8"
+            app:layout_constraintVertical_chainStyle="packed"
+            app:layout_constraintWidth_percent="0.8"
+            tools:ignore="MissingConstraints" />
+
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="@string/login"
+            android:onClick="@{framgnet::onTest}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_regist"
+            app:layout_constraintWidth_percent="0.8"
+            tools:ignore="MissingConstraints" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
