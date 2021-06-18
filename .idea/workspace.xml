@@ -43,8 +43,12 @@
       <change beforePath="$PROJECT_DIR$/.gradle/5.6.4/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.4/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yin/mvvmdemo/ui/fragments/login/WelComeFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yin/mvvmdemo/ui/fragments/login/WelComeFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/item_user.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/item_user.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yin/mvvmdemo/BasicApp.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yin/mvvmdemo/BasicApp.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yin/mvvmdemo/db/AppDatabase.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yin/mvvmdemo/db/AppDatabase.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yin/mvvmdemo/db/DataRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yin/mvvmdemo/db/DataRepository.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yin/mvvmdemo/ui/activity/RoomTestActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yin/mvvmdemo/ui/activity/RoomTestActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yin/mvvmdemo/ui/fragments/login/RegistFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yin/mvvmdemo/ui/fragments/login/RegistFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_regist.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_regist.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,10 +110,11 @@
       <recent name="com.yin.mvvmdemo.activity" />
     </key>
     <key name="CopyKotlinDeclarationDialog.RECENTS_KEY">
+      <recent name="com.yin.mvvmdemo.db.dao" />
+      <recent name="com.yin.mvvmdemo.db.entity" />
       <recent name="com.yin.mvvmdemo.data" />
       <recent name="com.yin.mvvmdemo.fragments.main" />
       <recent name="com.yin.mvvmdemo.fragments" />
-      <recent name="com.yin.mvvmdemo.activity" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Android\AndroidStudioProjects\MvvmDemo\app\src\main\res\layout" />
@@ -294,10 +299,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="509" y="133" key="#com.intellij.ide.util.MemberChooser" timestamp="1623764629185">
+    <state x="509" y="133" key="#com.intellij.ide.util.MemberChooser" timestamp="1624035768781">
       <screen x="0" y="0" width="1472" height="864" />
     </state>
-    <state x="509" y="133" key="#com.intellij.ide.util.MemberChooser/0.0.1472.864@0.0.1472.864" timestamp="1623764629185" />
+    <state x="509" y="133" key="#com.intellij.ide.util.MemberChooser/0.0.1472.864@0.0.1472.864" timestamp="1624035768781" />
     <state x="541" y="355" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1624021295458">
       <screen x="0" y="0" width="1472" height="864" />
     </state>
@@ -318,30 +323,30 @@
       <screen x="0" y="0" width="1472" height="864" />
     </state>
     <state x="568" y="222" key="AndroidCreateXmlResourceDialog/0.0.1472.864@0.0.1472.864" timestamp="1623054094242" />
-    <state x="93" y="93" width="1286" height="678" maximized="true" key="DiffContextDialog" timestamp="1624023921057">
+    <state x="93" y="93" width="1286" height="678" maximized="true" key="DiffContextDialog" timestamp="1624036053276">
       <screen x="0" y="0" width="1472" height="864" />
     </state>
-    <state x="93" y="93" width="1286" height="678" maximized="true" key="DiffContextDialog/0.0.1472.864@0.0.1472.864" timestamp="1624023921057" />
+    <state x="93" y="93" width="1286" height="678" maximized="true" key="DiffContextDialog/0.0.1472.864@0.0.1472.864" timestamp="1624036053276" />
     <state x="517" y="187" key="FileChooserDialogImpl" timestamp="1623315864492">
       <screen x="0" y="0" width="1472" height="864" />
     </state>
     <state x="517" y="187" key="FileChooserDialogImpl/0.0.1472.864@0.0.1472.864" timestamp="1623315864492" />
-    <state width="1429" height="452" key="GridCell.Tab.0.bottom" timestamp="1624023935905">
+    <state width="1429" height="330" key="GridCell.Tab.0.bottom" timestamp="1624037613715">
       <screen x="0" y="0" width="1472" height="864" />
     </state>
-    <state width="1429" height="452" key="GridCell.Tab.0.bottom/0.0.1472.864@0.0.1472.864" timestamp="1624023935905" />
-    <state width="1429" height="452" key="GridCell.Tab.0.center" timestamp="1624023935905">
+    <state width="1429" height="330" key="GridCell.Tab.0.bottom/0.0.1472.864@0.0.1472.864" timestamp="1624037613715" />
+    <state width="1429" height="330" key="GridCell.Tab.0.center" timestamp="1624037613715">
       <screen x="0" y="0" width="1472" height="864" />
     </state>
-    <state width="1429" height="452" key="GridCell.Tab.0.center/0.0.1472.864@0.0.1472.864" timestamp="1624023935905" />
-    <state width="1429" height="452" key="GridCell.Tab.0.left" timestamp="1624023935905">
+    <state width="1429" height="330" key="GridCell.Tab.0.center/0.0.1472.864@0.0.1472.864" timestamp="1624037613715" />
+    <state width="1429" height="330" key="GridCell.Tab.0.left" timestamp="1624037613715">
       <screen x="0" y="0" width="1472" height="864" />
     </state>
-    <state width="1429" height="452" key="GridCell.Tab.0.left/0.0.1472.864@0.0.1472.864" timestamp="1624023935905" />
-    <state width="1429" height="452" key="GridCell.Tab.0.right" timestamp="1624023935905">
+    <state width="1429" height="330" key="GridCell.Tab.0.left/0.0.1472.864@0.0.1472.864" timestamp="1624037613715" />
+    <state width="1429" height="330" key="GridCell.Tab.0.right" timestamp="1624037613715">
       <screen x="0" y="0" width="1472" height="864" />
     </state>
-    <state width="1429" height="452" key="GridCell.Tab.0.right/0.0.1472.864@0.0.1472.864" timestamp="1624023935905" />
+    <state width="1429" height="330" key="GridCell.Tab.0.right/0.0.1472.864@0.0.1472.864" timestamp="1624037613715" />
     <state x="436" y="164" width="682" height="536" key="find.popup" timestamp="1623815965516">
       <screen x="0" y="0" width="1472" height="864" />
     </state>

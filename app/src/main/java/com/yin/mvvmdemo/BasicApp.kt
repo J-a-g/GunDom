@@ -7,14 +7,13 @@ import com.yin.mvvmdemo.db.AppDatabase
 import com.yin.mvvmdemo.db.DataRepository
 
 class BasicApp : Application() {
-
+    companion object {
+        var instance: Application? = null
+    }
 
     override fun onCreate() {
         super.onCreate()
+        instance = this
     }
-
-//    fun getDatabase() = AppDatabase.getInstance(this)
-
-    fun getDataRepository() = AppDatabase.getInstance(this)?.let { DataRepository.getInstance(it) }
 
 }
