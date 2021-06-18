@@ -15,7 +15,7 @@
 
         <variable
             name="onItemClickListener"
-            type="com.yin.mvvmdemo.adapter.UserAdapter.OnItemClickListener" />
+            type="com.yin.mvvmdemo.ui.adapter.UserAdapter.OnItemClickListener" />
 
     </data>
 

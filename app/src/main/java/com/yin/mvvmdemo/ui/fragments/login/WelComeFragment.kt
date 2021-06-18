@@ -4,8 +4,10 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.yin.mvvmdemo.R
 import com.yin.mvvmdemo.databinding.FragmentWelcomeBinding
 
@@ -26,7 +28,13 @@ class WelComeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
     }
 
-    fun onTest(view: View){
-
+    fun onTest(view: View) {
+        if (view.id == R.id.btn_login) {
+            Toast.makeText(context, "登录", Toast.LENGTH_SHORT).show()
+            findNavController().navigate(R.id.action_welcome_to_login)
+        } else if (view.id == R.id.btn_regist) {
+            Toast.makeText(context, "注册", Toast.LENGTH_SHORT).show()
+            findNavController().navigate(R.id.action_welcome_to_regist)
+        }
     }
 }
