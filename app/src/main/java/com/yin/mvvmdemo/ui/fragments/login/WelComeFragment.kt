@@ -28,12 +28,10 @@ class WelComeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
     }
 
-    fun onTest(view: View) {
+    fun onClick(view: View) {
         if (view.id == R.id.btn_login) {
-            Toast.makeText(context, "登录", Toast.LENGTH_SHORT).show()
             findNavController().navigate(R.id.action_welcome_to_login)
         } else if (view.id == R.id.btn_regist) {
-            Toast.makeText(context, "注册", Toast.LENGTH_SHORT).show()
             findNavController().navigate(R.id.action_welcome_to_regist)
         }
     }
