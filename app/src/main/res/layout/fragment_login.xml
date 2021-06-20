@@ -91,6 +91,7 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:background="@drawable/shape_btn_regist"
+            android:onClick="@{fragment::onClick}"
             android:text="@string/login"
             android:textSize="@dimen/txt_big_size"
             app:layout_constraintBottom_toBottomOf="parent"

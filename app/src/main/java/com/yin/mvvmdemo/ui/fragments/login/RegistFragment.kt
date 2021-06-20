@@ -20,8 +20,8 @@ class RegistFragment : Fragment() {
     private val registViewModel by lazy {
         Log.w("scj", "1111111111")
         ViewModelProvider(this).get(RegistViewModel::class.java)
-
     }
+
     private var binding: FragmentRegistBinding? = null
 
     override fun onCreateView(

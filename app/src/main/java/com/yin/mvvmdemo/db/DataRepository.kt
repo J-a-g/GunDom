@@ -43,4 +43,25 @@ class DataRepository(private val database: AppDatabase) {
     fun insertUser(user: UserEntity) = database.userDao().insertUsers(user)
 
     fun queryUsers(): Array<UserEntity> = database.userDao().loadAllUsers()
+
+    fun registUser(user: UserEntity): Boolean = database.userDao().regist(user)
+
+    fun queryUserByColumn(user: UserEntity): Array<UserEntity>? =
+        user.username?.let {
+            user.email?.let { it1 ->
+                database.userDao().loadUsersByColumn(
+                    it,
+                    it1
+                )
+            }
+        }
+
+    fun loginUser(user: UserEntity): Boolean {
+        val users: Array<UserEntity>? = user.username?.let {
+            user.password?.let { it1 ->
+                database.userDao().loginUser(it, it1)
+            }
+        }
+        return users != null && users.isNotEmpty()
+    }
 }

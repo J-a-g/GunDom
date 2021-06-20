@@ -1,13 +1,20 @@
 package com.yin.mvvmdemo.viewmodel
 
 import android.util.Log
+import android.widget.Toast
 import androidx.lifecycle.ViewModel
+import com.yin.mvvmdemo.BasicApp
 import com.yin.mvvmdemo.db.DataRepository
 import com.yin.mvvmdemo.db.entity.UserEntity
 
 class RegistViewModel : ViewModel() {
 
     fun regist(user: UserEntity) {
-        DataRepository.getInstance()?.insertUser(user)
+        val result = DataRepository.getInstance()?.registUser(user)
+        if (result != true) {
+            Toast.makeText(BasicApp.instance, "邮箱或账号已存在!", Toast.LENGTH_SHORT).show()
+        } else {
+            Toast.makeText(BasicApp.instance, "注册成功!", Toast.LENGTH_SHORT).show()
+        }
     }
 }
