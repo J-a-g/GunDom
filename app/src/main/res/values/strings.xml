@@ -12,4 +12,9 @@
 
     <string name="regist">注册（regist）</string>
     <string name="login">登录（login）</string>
+
+    <string name="product">商品</string>
+    <string name="favorite">收藏</string>
+    <string name="me">我的</string>
+    <string name="setting">设置</string>
 </resources>

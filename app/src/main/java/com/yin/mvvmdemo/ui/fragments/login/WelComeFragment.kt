@@ -30,7 +30,9 @@ class WelComeFragment : Fragment() {
 
     fun onClick(view: View) {
         if (view.id == R.id.btn_login) {
-            findNavController().navigate(R.id.action_welcome_to_login)
+            val direction = WelComeFragmentDirections.actionWelcomeToLogin("suchengjain")
+            findNavController().navigate(direction)
+//            findNavController().navigate(R.id.action_welcome_to_login)
         } else if (view.id == R.id.btn_regist) {
             findNavController().navigate(R.id.action_welcome_to_regist)
         }

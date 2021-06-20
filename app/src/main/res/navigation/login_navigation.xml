@@ -18,12 +18,17 @@
             android:id="@+id/action_welcome_to_regist"
             app:destination="@id/regist" />
 
+
     </fragment>
 
     <fragment
         android:id="@+id/login"
         android:name="com.yin.mvvmdemo.ui.fragments.login.LoginFragment"
-        tools:layout="@layout/fragment_login" />
+        tools:layout="@layout/fragment_login">
+        <argument
+            android:name="test"
+            app:argType="string" />
+    </fragment>
 
     <fragment
         android:id="@+id/regist"

@@ -13,6 +13,7 @@ import androidx.navigation.Navigation
 import com.yin.mvvmdemo.R
 import com.yin.mvvmdemo.databinding.FragmentLoginBinding
 import com.yin.mvvmdemo.db.entity.UserEntity
+import com.yin.mvvmdemo.ui.activity.Main1Activity
 import com.yin.mvvmdemo.ui.activity.MainActivity
 import com.yin.mvvmdemo.viewmodel.LoginViewModel
 
@@ -50,15 +51,12 @@ class LoginFragment : Fragment() {
             loginViewModel.login(user, object : LoginViewModel.OnLoginListener {
                 override fun onResult(result: Boolean) {
                     if (result) {
-                        startActivity(Intent(activity, MainActivity::class.java))
+                        startActivity(Intent(activity, Main1Activity::class.java))
                     } else {
                         Toast.makeText(activity, "账号密码错误!", Toast.LENGTH_SHORT).show()
                     }
                 }
-
             })
         }
     }
-
-
 }

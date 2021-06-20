@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/login_navigation"
+    app:startDestination="@id/home">
+
+    <fragment
+        android:id="@+id/home"
+        android:name="com.yin.mvvmdemo.ui.fragments.main.HomeViewPageFragment"
+        tools:layout="@layout/fragment_view_page">
+        <action
+            android:id="@+id/action_me_to_setting"
+            app:destination="@id/setting" />
+    </fragment>
+   
+
+    <fragment
+        android:id="@+id/setting"
+        android:name="com.yin.mvvmdemo.ui.fragments.main.SettingFragment"
+        tools:layout="@layout/fragment_setting" />
+
+</navigation>
