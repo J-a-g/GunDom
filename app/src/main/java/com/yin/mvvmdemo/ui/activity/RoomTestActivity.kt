@@ -6,11 +6,10 @@ import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
-import com.yin.mvvmdemo.BasicApp
 import com.yin.mvvmdemo.R
 import com.yin.mvvmdemo.databinding.ActivityRoomTestBinding
 import com.yin.mvvmdemo.db.DataRepository
-import com.yin.mvvmdemo.db.entity.ProductEntity
+import com.yin.mvvmdemo.db.entity.Product
 
 class RoomTestActivity : AppCompatActivity() {
 
@@ -20,13 +19,13 @@ class RoomTestActivity : AppCompatActivity() {
             DataBindingUtil.setContentView(this, R.layout.activity_room_test)
     }
 
-    var delProductEntity: ProductEntity? = null
+    var delProductEntity: Product? = null
 
     fun onclick(view: View) {
         if (view.id == R.id.btn_add) {
             Toast.makeText(this, "添加一条数据", Toast.LENGTH_SHORT).show()
             DataRepository.getInstance()
-                ?.insert(ProductEntity("测试商品", "测试描述", 100.19))
+                ?.insert(Product(product_name = "测试商品", product_price = 99.9, product_desc = "描述"))
         } else if (view.id == R.id.btn_del) {
             Toast.makeText(this, "删除一条数据", Toast.LENGTH_SHORT).show()
             delProductEntity?.let {
@@ -47,12 +46,12 @@ class RoomTestActivity : AppCompatActivity() {
             Toast.makeText(this, "读取一条数据", Toast.LENGTH_SHORT).show()
             val data = DataRepository.getInstance()?.queryProduct()
 
-            if (data != null) {
-                for (product in data) {
-                    delProductEntity = product
-                    Log.w("scj", "product-->" + product.toString())
-                }
-            }
+//            if (data != null) {
+////                for (product in data.value!!) {
+////                    delProductEntity = product
+////                    Log.w("scj", "product-->" + product.toString())
+////                }
+//            }
         }
     }
 }

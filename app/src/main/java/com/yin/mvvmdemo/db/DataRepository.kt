@@ -1,7 +1,7 @@
 package com.yin.mvvmdemo.db
 
 import android.util.Log
-import com.yin.mvvmdemo.db.entity.ProductEntity
+import com.yin.mvvmdemo.db.entity.Product
 import com.yin.mvvmdemo.db.entity.UserEntity
 
 class DataRepository(private val database: AppDatabase) {
@@ -24,19 +24,19 @@ class DataRepository(private val database: AppDatabase) {
         }
     }
 
-    fun insert(product: ProductEntity) {
+    fun insert(product: Product) {
         database.productDao().insertProducts(product)
     }
 
-    fun queryProduct(): Array<ProductEntity> {
-        return database.productDao().loadAllProducts()
-    }
+    fun queryProduct() = database.productDao().loadAllProducts()
 
-    fun deleteProducts(product: ProductEntity) {
+    fun queryTopProduct() = database.productDao().getTopProduct()
+
+    fun deleteProducts(product: Product) {
         database.productDao().deleteProducts(product)
     }
 
-    fun updateProducts(product: ProductEntity) {
+    fun updateProducts(product: Product) {
         database.productDao().updateProduct(product)
     }
 

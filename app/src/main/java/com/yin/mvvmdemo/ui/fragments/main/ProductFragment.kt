@@ -5,28 +5,53 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
-import com.yin.mvvmdemo.R
+import androidx.fragment.app.viewModels
+import androidx.lifecycle.Observer
 import com.yin.mvvmdemo.databinding.FragmentProductBinding
+import com.yin.mvvmdemo.ui.adapter.ProductAdapter
+import com.yin.mvvmdemo.viewmodel.ProductViewModel
 
-class ProductFragment: Fragment() {
+class ProductFragment : Fragment() {
+
+    private val viewModel: ProductViewModel by viewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        Log.w("scj", "ProductFragment onCreateView")
-        val binding: FragmentProductBinding =
-            DataBindingUtil.inflate(inflater, R.layout.fragment_product, container, false)
+        val binding = FragmentProductBinding.inflate(inflater, container, false)
+        binding.viewmodel = viewModel
+//        context ?: return binding.root
+        binding.lifecycleOwner = this
+
+        val adapter = ProductAdapter(onItemClickListener)
+        binding.productListRecyclerView.adapter = adapter
+        viewModel.products?.observe(viewLifecycleOwner, Observer {
+            it?.let {
+                Log.w("scj", "products 更新回调 : " + it)
+
+                adapter.submitList(it)
+            }
+        })
+
         return binding.root
     }
 
+    private val onItemClickListener = object : ProductAdapter.OnItemClickListener {
+        override fun onItemClick(position: Int) {
+            viewModel.onclickItem(position)
+        }
+    }
+
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        Log.w("scj", "ProductFragment onViewCreated")
     }
+
+
+    /**************生命周期相关************/
 
     override fun onResume() {
         super.onResume()

@@ -1,6 +1,5 @@
 package com.yin.mvvmdemo.db
 
-import android.content.Context
 import android.util.Log
 import androidx.room.Database
 import androidx.room.Room
@@ -9,10 +8,10 @@ import androidx.sqlite.db.SupportSQLiteDatabase
 import com.yin.mvvmdemo.BasicApp
 import com.yin.mvvmdemo.db.dao.ProductDao
 import com.yin.mvvmdemo.db.dao.UserDao
-import com.yin.mvvmdemo.db.entity.ProductEntity
+import com.yin.mvvmdemo.db.entity.Product
 import com.yin.mvvmdemo.db.entity.UserEntity
 
-@Database(entities = arrayOf(ProductEntity::class, UserEntity::class), version = 1)
+@Database(entities = arrayOf(Product::class, UserEntity::class), version = 1)
 abstract class AppDatabase : RoomDatabase() {
     abstract fun productDao(): ProductDao
 
