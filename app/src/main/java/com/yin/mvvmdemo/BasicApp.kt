@@ -8,7 +8,7 @@ import com.yin.mvvmdemo.db.DataRepository
 
 class BasicApp : Application() {
     companion object {
-        var instance: Application? = null
+        lateinit var instance: Application
     }
 
     override fun onCreate() {

@@ -25,7 +25,7 @@ class RoomTestActivity : AppCompatActivity() {
         if (view.id == R.id.btn_add) {
             Toast.makeText(this, "添加一条数据", Toast.LENGTH_SHORT).show()
             DataRepository.getInstance()
-                ?.insert(Product(product_name = "测试商品", product_price = 99.9, product_desc = "描述"))
+                ?.insert(Product(name = "测试商品", price = 99.9, description = "描述"))
         } else if (view.id == R.id.btn_del) {
             Toast.makeText(this, "删除一条数据", Toast.LENGTH_SHORT).show()
             delProductEntity?.let {
@@ -34,9 +34,9 @@ class RoomTestActivity : AppCompatActivity() {
             }
         } else if (view.id == R.id.btn_update) {
             delProductEntity?.let {
-                delProductEntity!!.product_price = 99.99
-                delProductEntity!!.product_desc = "苏大强描述"
-                delProductEntity!!.product_name = "苏大强"
+                delProductEntity!!.price = 99.99
+                delProductEntity!!.description = "苏大强描述"
+                delProductEntity!!.name = "苏大强"
                 DataRepository.getInstance()
                     ?.updateProducts(it)
             }

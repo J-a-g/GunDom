@@ -24,9 +24,9 @@ class DataRepository(private val database: AppDatabase) {
         }
     }
 
-    fun insert(product: Product) {
-        database.productDao().insertProducts(product)
-    }
+    fun insert(product: Product) = database.productDao().insertProduct(product)
+
+    fun insertProducts(products: List<Product>) = database.productDao().insertProducts(products)
 
     fun queryProduct() = database.productDao().loadAllProducts()
 

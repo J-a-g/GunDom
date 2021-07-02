@@ -7,7 +7,10 @@ import com.yin.mvvmdemo.db.entity.Product
 @Dao
 interface ProductDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun insertProducts(vararg product: Product)//vararg 可变参数
+    fun insertProduct(product: Product)
+
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    fun insertProducts(product: List<Product>)
 
     @Insert
     fun insertBothProducts(product1: Product, product2: Product)
