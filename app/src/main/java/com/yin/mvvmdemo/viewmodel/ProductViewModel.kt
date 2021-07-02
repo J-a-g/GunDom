@@ -37,7 +37,7 @@ class ProductViewModel : ViewModel() {
 
     fun onQuery() {
         val context = BasicApp.instance as Context
-        context.assets.open("shoes.json").use {
+        context.assets.open("gundom.json").use {
             JsonReader(it.reader()).use {
                 val gundomType = object : TypeToken<List<Product>>() {}.type
                 val gundoms: List<Product> = Gson().fromJson(it, gundomType)

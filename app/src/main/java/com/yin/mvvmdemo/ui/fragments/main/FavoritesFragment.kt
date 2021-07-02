@@ -25,7 +25,8 @@ class FavoritesFragment : Fragment() {
         Log.w("scj", "FavoritesFragment onCreateView")
         val binding: FragmentFavoritesBinding =
             DataBindingUtil.inflate(inflater, R.layout.fragment_favorites, container, false)
-        val url = "https://raw.githubusercontent.com/mCyp/Photo/master/1560651081240.jpeg"
+//        val url = "https://raw.githubusercontent.com/mCyp/Photo/master/1560651081240.jpeg"
+        val url = "https://gitee.com/jags/pictures/raw/master/images/MG_01.jpg"
 
         Glide.with(BasicApp.instance)
             .load(url)
