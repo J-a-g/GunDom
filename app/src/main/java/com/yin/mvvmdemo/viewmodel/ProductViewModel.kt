@@ -32,15 +32,10 @@ class ProductViewModel : ViewModel() {
         Log.w("scj", "onInsert")
         val pro = Product()
         DataRepository.getInstance()?.insert(pro)
-
         position = 0
-//        topProduct.value = DataRepository.getInstance()?.queryTopProduct()
     }
 
     fun onQuery() {
-//        Log.w("scj", "topProduct:" + topProduct.value.toString())
-//        DataRepository.getInstance()?.queryProduct()
-
         val context = BasicApp.instance as Context
         context.assets.open("shoes.json").use {
             JsonReader(it.reader()).use {
@@ -55,16 +50,12 @@ class ProductViewModel : ViewModel() {
     }
 
     fun onUpdate() {
-        Log.w("scj", "onUpdate")
-
         val newList = products?.value?.toMutableList()
         val pro = newList?.get(position)?.copy()
-
         if (pro != null) {
             Log.w("scj", "修改原来数据 ：" + pro.toString())
             pro.price = 77.7
             pro.name = "hello world"
-
             newList.removeAt(position)
             newList.add(position, pro)
             DataRepository.getInstance()?.updateProducts(pro)

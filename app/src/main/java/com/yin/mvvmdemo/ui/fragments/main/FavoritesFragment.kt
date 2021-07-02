@@ -1,5 +1,6 @@
 package com.yin.mvvmdemo.ui.fragments.main
 
+import android.content.Context
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -7,6 +8,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import com.bumptech.glide.Glide
+import com.yin.mvvmdemo.BasicApp
 import com.yin.mvvmdemo.R
 import com.yin.mvvmdemo.databinding.FragmentFavoritesBinding
 import com.yin.mvvmdemo.databinding.FragmentSettingBinding
@@ -22,6 +25,12 @@ class FavoritesFragment : Fragment() {
         Log.w("scj", "FavoritesFragment onCreateView")
         val binding: FragmentFavoritesBinding =
             DataBindingUtil.inflate(inflater, R.layout.fragment_favorites, container, false)
+        val url = "https://raw.githubusercontent.com/mCyp/Photo/master/1560651081240.jpeg"
+
+        Glide.with(BasicApp.instance)
+            .load(url)
+            .placeholder(R.drawable.glide_placeholder)
+            .into(binding.image)
         return binding.root
     }
 
@@ -29,6 +38,19 @@ class FavoritesFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         Log.w("scj", "FavoritesFragment onViewCreated")
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     override fun onResume() {
         super.onResume()
