@@ -2,10 +2,12 @@ package com.yin.mvvmdemo.ui.adapter
 
 import android.util.Log
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import com.yin.mvvmdemo.R
 import com.yin.mvvmdemo.databinding.ItemProductBinding
 import com.yin.mvvmdemo.db.entity.Product
 
@@ -36,7 +38,8 @@ class ProductAdapter(private val onItemClickListener: OnItemClickListener) :
 
         init {
             binding.setClickListener {
-                listener.onItemClick(position = position)
+                listener.onItemClick(it, position = position)
+
             }
         }
 
@@ -48,7 +51,7 @@ class ProductAdapter(private val onItemClickListener: OnItemClickListener) :
     }
 
     interface OnItemClickListener {
-        fun onItemClick(position: Int)
+        fun onItemClick(view: View, position: Int)
     }
 
 }

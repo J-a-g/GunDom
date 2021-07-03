@@ -30,7 +30,6 @@ class HomeViewPageFragment : Fragment() {
         TabLayoutMediator(tabLayout, viewPager) { tab, position ->
             tab.setIcon(getTabIcon(position))
             tab.text = getTabTitle(position)
-
         }.attach()
 
         return binding.root

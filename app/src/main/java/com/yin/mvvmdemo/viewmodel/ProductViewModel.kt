@@ -61,4 +61,22 @@ class ProductViewModel : ViewModel() {
             DataRepository.getInstance()?.updateProducts(pro)
         }
     }
+
+    fun onLike(position: Int){
+        val newList = products?.value?.toMutableList()
+        val pro = newList?.get(position)?.copy()
+        if (pro != null) {
+            Log.w("scj", "修改原来数据 ：" + pro.toString())
+
+            if(pro.like == 0){
+                pro.like++
+            }else{
+                pro.like = 0
+            }
+
+            newList.removeAt(position)
+            newList.add(position, pro)
+            DataRepository.getInstance()?.updateProducts(pro)
+        }
+    }
 }

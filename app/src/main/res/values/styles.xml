@@ -9,4 +9,20 @@
         <item name="android:textColor">@color/colorPrimary</item>
     </style>
 
+    <style name="mytest">
+        <item name="android:background">?attr/colorOnPrimary</item>
+        <item name="tabIconTint">@color/mtrl_tabs_icon_color_selector_colored</item>
+        <item name="tabIndicatorColor">?attr/colorPrimary</item>
+        <item name="tabTextColor">@color/mtrl_tabs_icon_color_selector_colored</item>
+        <item name="tabRippleColor">@color/mtrl_tabs_colored_ripple_color</item>
+    </style>
+
+
+<!--    <style name="kkkk">-->
+<!--        <item name="android:background">?attr/colorPrimary</item>-->
+<!--        <item name="tabIconTint">@color/mtrl_tabs_icon_color_selector_colored</item>-->
+<!--        <item name="tabIndicatorColor">?attr/colorOnPrimary</item>-->
+<!--        <item name="tabTextColor">@color/mtrl_tabs_icon_color_selector_colored</item>-->
+<!--        <item name="tabRippleColor"></item>-->
+<!--    </style>-->
 </resources>

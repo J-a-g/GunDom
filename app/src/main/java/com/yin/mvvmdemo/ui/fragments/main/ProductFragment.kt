@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
+import com.yin.mvvmdemo.R
 import com.yin.mvvmdemo.databinding.FragmentProductBinding
 import com.yin.mvvmdemo.ui.adapter.ProductAdapter
 import com.yin.mvvmdemo.viewmodel.ProductViewModel
@@ -40,8 +41,13 @@ class ProductFragment : Fragment() {
     }
 
     private val onItemClickListener = object : ProductAdapter.OnItemClickListener {
-        override fun onItemClick(position: Int) {
-            viewModel.onclickItem(position)
+        override fun onItemClick(view: View, position: Int) {
+            if(view.id == R.id.tv_like){
+                Log.w("scj", "position ->" + position + " 被点赞")
+                viewModel.onLike(position)
+            }else {
+                viewModel.onclickItem(position)
+            }
         }
     }
 
