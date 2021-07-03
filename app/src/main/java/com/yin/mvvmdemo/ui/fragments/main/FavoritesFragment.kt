@@ -1,6 +1,5 @@
 package com.yin.mvvmdemo.ui.fragments.main
 
-import android.content.Context
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -8,14 +7,16 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
-import com.bumptech.glide.Glide
-import com.yin.mvvmdemo.BasicApp
+import androidx.fragment.app.viewModels
 import com.yin.mvvmdemo.R
 import com.yin.mvvmdemo.databinding.FragmentFavoritesBinding
-import com.yin.mvvmdemo.databinding.FragmentSettingBinding
+import com.yin.mvvmdemo.ui.adapter.FavoritesAdapter
+import com.yin.mvvmdemo.viewmodel.FavoritesViewModel
 
 //收藏
 class FavoritesFragment : Fragment() {
+
+    private val viewModel: FavoritesViewModel by viewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -25,13 +26,17 @@ class FavoritesFragment : Fragment() {
         Log.w("scj", "FavoritesFragment onCreateView")
         val binding: FragmentFavoritesBinding =
             DataBindingUtil.inflate(inflater, R.layout.fragment_favorites, container, false)
-//        val url = "https://raw.githubusercontent.com/mCyp/Photo/master/1560651081240.jpeg"
-        val url = "https://gitee.com/jags/pictures/raw/master/images/MG_01.jpg"
+        binding.lifecycleOwner = this
+        val adapter = FavoritesAdapter()
+        binding.favoritesListRecyclerView.adapter = adapter
+        viewModel.products?.observe(viewLifecycleOwner, {
+            it?.let {
+                Log.w("scj", "products 更新回调 : " + it)
+                adapter.submitList(it)
+            }
+        })
 
-        Glide.with(BasicApp.instance)
-            .load(url)
-            .placeholder(R.drawable.glide_placeholder)
-            .into(binding.image)
+
         return binding.root
     }
 
@@ -39,18 +44,6 @@ class FavoritesFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         Log.w("scj", "FavoritesFragment onViewCreated")
     }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     override fun onResume() {

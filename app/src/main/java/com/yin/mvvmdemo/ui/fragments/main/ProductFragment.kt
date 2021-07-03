@@ -25,7 +25,7 @@ class ProductFragment : Fragment() {
         val binding = FragmentProductBinding.inflate(inflater, container, false)
         binding.viewmodel = viewModel
 //        context ?: return binding.root
-        binding.lifecycleOwner = this
+        binding.lifecycleOwner = this// TODO 有疑问
 
         val adapter = ProductAdapter(onItemClickListener)
         binding.productListRecyclerView.adapter = adapter
