@@ -10,6 +10,7 @@ object BindingConverters {
     }
 
 
+    //TODO 有疑问
 //    @BindingConversion //加了这个有什么区别
 //    @JvmStatic fun isZero22(number: Int): Boolean {
 //        Log.w("scj", "isZero")

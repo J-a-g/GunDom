@@ -12,9 +12,8 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.Navigation
 import com.yin.mvvmdemo.R
 import com.yin.mvvmdemo.databinding.FragmentLoginBinding
-import com.yin.mvvmdemo.db.entity.UserEntity
+import com.yin.mvvmdemo.db.entity.User
 import com.yin.mvvmdemo.ui.activity.Main1Activity
-import com.yin.mvvmdemo.ui.activity.MainActivity
 import com.yin.mvvmdemo.viewmodel.LoginViewModel
 
 class LoginFragment : Fragment() {
@@ -44,8 +43,8 @@ class LoginFragment : Fragment() {
         if (view.id == R.id.tv_cancel) {
             Navigation.findNavController(view).navigateUp()
         } else if (view.id == R.id.btn_sign_in) {
-            val user = UserEntity()
-            user.username = binding?.etAccount?.text.toString().trim()
+            val user = User()
+            user.email = binding?.etEmail?.text.toString().trim()
             user.password = binding?.etPassWord?.text.toString().trim()
             user.login = true
             loginViewModel.login(user, object : LoginViewModel.OnLoginListener {

@@ -9,10 +9,7 @@ import androidx.fragment.app.Fragment
 import com.google.android.material.tabs.TabLayoutMediator
 import com.yin.mvvmdemo.R
 import com.yin.mvvmdemo.databinding.FragmentViewPageBinding
-import com.yin.mvvmdemo.ui.adapter.FAVORITE_PAGE_INDEX
-import com.yin.mvvmdemo.ui.adapter.ME_PAGE_INDEX
-import com.yin.mvvmdemo.ui.adapter.PRODUCT_PAGE_INDEX
-import com.yin.mvvmdemo.ui.adapter.SunflowerPagerAdapter
+import com.yin.mvvmdemo.ui.adapter.*
 
 class HomeViewPageFragment : Fragment() {
     override fun onCreateView(
@@ -25,7 +22,7 @@ class HomeViewPageFragment : Fragment() {
         val viewPager = binding.viewPager
         val tabLayout = binding.tabs
 
-        viewPager.adapter = SunflowerPagerAdapter(this)
+        viewPager.adapter = HomePagerAdapter(this)
 
         TabLayoutMediator(tabLayout, viewPager) { tab, position ->
             tab.setIcon(getTabIcon(position))

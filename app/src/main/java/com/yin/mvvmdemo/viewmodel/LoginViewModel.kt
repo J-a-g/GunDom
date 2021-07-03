@@ -2,11 +2,11 @@ package com.yin.mvvmdemo.viewmodel
 
 import androidx.lifecycle.ViewModel
 import com.yin.mvvmdemo.db.DataRepository
-import com.yin.mvvmdemo.db.entity.UserEntity
+import com.yin.mvvmdemo.db.entity.User
 
 class LoginViewModel : ViewModel() {
 
-    fun login(user: UserEntity, onLoginListener: OnLoginListener) {
+    fun login(user: User, onLoginListener: OnLoginListener) {
         DataRepository.getInstance()?.loginUser(user)?.let { onLoginListener.onResult(it) }
     }
 

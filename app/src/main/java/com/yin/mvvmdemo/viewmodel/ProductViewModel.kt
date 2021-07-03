@@ -9,6 +9,7 @@ import com.google.gson.reflect.TypeToken
 import com.google.gson.stream.JsonReader
 import com.yin.mvvmdemo.BasicApp
 import com.yin.mvvmdemo.db.DataRepository
+import com.yin.mvvmdemo.db.entity.Like
 import com.yin.mvvmdemo.db.entity.Product
 
 class ProductViewModel : ViewModel() {
@@ -65,18 +66,25 @@ class ProductViewModel : ViewModel() {
     fun onLike(position: Int){
         val newList = products?.value?.toMutableList()
         val pro = newList?.get(position)?.copy()
+        val like = Like()
         if (pro != null) {
             Log.w("scj", "修改原来数据 ：" + pro.toString())
+            like.pro_id = pro.id
+            like.user_id = 1
 
             if(pro.like == 0){
                 pro.like++
+                DataRepository.getInstance()?.insertLike(like)
             }else{
                 pro.like = 0
+                DataRepository.getInstance()?.deleteLike(like)
             }
 
             newList.removeAt(position)
             newList.add(position, pro)
             DataRepository.getInstance()?.updateProducts(pro)
+
         }
+
     }
 }

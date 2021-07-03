@@ -9,10 +9,9 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.Navigation
-import com.google.android.material.navigation.NavigationView
 import com.yin.mvvmdemo.R
 import com.yin.mvvmdemo.databinding.FragmentRegistBinding
-import com.yin.mvvmdemo.db.entity.UserEntity
+import com.yin.mvvmdemo.db.entity.User
 import com.yin.mvvmdemo.viewmodel.RegistViewModel
 
 class RegistFragment : Fragment() {
@@ -44,7 +43,7 @@ class RegistFragment : Fragment() {
         if (view.id == R.id.tv_cancel) {
             Navigation.findNavController(view).navigateUp()
         } else if (view.id == R.id.btn_sign_up) {
-            val user = UserEntity()
+            val user = User()
             user.username = binding?.etAccount?.text.toString().trim()
             user.email = binding?.etEmail?.text.toString().trim()
             user.password = binding?.etPassWorld?.text.toString().trim()

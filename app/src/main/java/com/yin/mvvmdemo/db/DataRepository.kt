@@ -1,8 +1,9 @@
 package com.yin.mvvmdemo.db
 
 import android.util.Log
+import com.yin.mvvmdemo.db.entity.Like
 import com.yin.mvvmdemo.db.entity.Product
-import com.yin.mvvmdemo.db.entity.UserEntity
+import com.yin.mvvmdemo.db.entity.User
 
 class DataRepository(private val database: AppDatabase) {
 
@@ -24,6 +25,10 @@ class DataRepository(private val database: AppDatabase) {
         }
     }
 
+    fun insertLike(like: Like) = database.likeDao().insertLike(like)
+
+    fun deleteLike(like: Like) = database.likeDao().deleteLikes(like.pro_id, like.user_id)
+
     fun insert(product: Product) = database.productDao().insertProduct(product)
 
     fun insertProducts(products: List<Product>) = database.productDao().insertProducts(products)
@@ -40,13 +45,13 @@ class DataRepository(private val database: AppDatabase) {
         database.productDao().updateProduct(product)
     }
 
-    fun insertUser(user: UserEntity) = database.userDao().insertUsers(user)
+    fun insertUser(user: User) = database.userDao().insertUsers(user)
 
-    fun queryUsers(): Array<UserEntity> = database.userDao().loadAllUsers()
+    fun queryUsers(): Array<User> = database.userDao().loadAllUsers()
 
-    fun registUser(user: UserEntity): Boolean = database.userDao().regist(user)
+    fun registUser(user: User): Boolean = database.userDao().regist(user)
 
-    fun queryUserByColumn(user: UserEntity): Array<UserEntity>? =
+    fun queryUserByColumn(user: User): Array<User>? =
         user.username?.let {
             user.email?.let { it1 ->
                 database.userDao().loadUsersByColumn(
@@ -56,8 +61,8 @@ class DataRepository(private val database: AppDatabase) {
             }
         }
 
-    fun loginUser(user: UserEntity): Boolean {
-        val users: Array<UserEntity>? = user.username?.let {
+    fun loginUser(user: User): Boolean {
+        val users: Array<User>? = user.email?.let {
             user.password?.let { it1 ->
                 database.userDao().loginUser(it, it1)
             }

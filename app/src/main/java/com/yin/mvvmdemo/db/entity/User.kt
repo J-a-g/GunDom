@@ -5,9 +5,9 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 
 @Entity(tableName = "user")
-class UserEntity {
+class User {
     @PrimaryKey(autoGenerate = true)
-    var id: Int = 0
+    var id: Long = 0
 
     @ColumnInfo(name = "tb_username")
     var username: String? = null

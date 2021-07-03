@@ -34,10 +34,21 @@
   <component name="ChangeListManager">
     <list default="true" id="e01fd035-7a9e-4453-8af1-c4f41f231621" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yin/mvvmdemo/ui/fragments/main/FavoritesFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yin/mvvmdemo/ui/fragments/main/FavoritesFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yin/mvvmdemo/ui/fragments/main/ProductFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yin/mvvmdemo/ui/fragments/main/ProductFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_favorites.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_favorites.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yin/mvvmdemo/databinding/BindingConverters.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yin/mvvmdemo/databinding/BindingConverters.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yin/mvvmdemo/db/AppDatabase.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yin/mvvmdemo/db/AppDatabase.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yin/mvvmdemo/db/DataRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yin/mvvmdemo/db/DataRepository.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yin/mvvmdemo/db/dao/UserDao.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yin/mvvmdemo/db/dao/UserDao.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yin/mvvmdemo/db/entity/UserEntity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yin/mvvmdemo/db/entity/User.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yin/mvvmdemo/ui/adapter/SunflowerPagerAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yin/mvvmdemo/ui/adapter/HomePagerAdapter.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yin/mvvmdemo/ui/fragments/login/LoginFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yin/mvvmdemo/ui/fragments/login/LoginFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yin/mvvmdemo/ui/fragments/login/RegistFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yin/mvvmdemo/ui/fragments/login/RegistFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yin/mvvmdemo/ui/fragments/main/HomeViewPageFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yin/mvvmdemo/ui/fragments/main/HomeViewPageFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yin/mvvmdemo/viewmodel/LoginViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yin/mvvmdemo/viewmodel/LoginViewModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yin/mvvmdemo/viewmodel/ProductViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yin/mvvmdemo/viewmodel/ProductViewModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yin/mvvmdemo/viewmodel/RegistViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yin/mvvmdemo/viewmodel/RegistViewModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_login.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_login.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/xml/network_security_config.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -320,10 +331,10 @@
       <screen x="0" y="0" width="1472" height="864" />
     </state>
     <state x="568" y="222" key="AndroidCreateXmlResourceDialog/0.0.1472.864@0.0.1472.864" timestamp="1623054094242" />
-    <state x="93" y="93" width="1286" height="678" maximized="true" key="DiffContextDialog" timestamp="1625329570721">
+    <state x="93" y="93" width="1286" height="678" maximized="true" key="DiffContextDialog" timestamp="1625332224384">
       <screen x="0" y="0" width="1472" height="864" />
     </state>
-    <state x="93" y="93" width="1286" height="678" maximized="true" key="DiffContextDialog/0.0.1472.864@0.0.1472.864" timestamp="1625329570721" />
+    <state x="93" y="93" width="1286" height="678" maximized="true" key="DiffContextDialog/0.0.1472.864@0.0.1472.864" timestamp="1625332224384" />
     <state x="517" y="187" key="FileChooserDialogImpl" timestamp="1623315864492">
       <screen x="0" y="0" width="1472" height="864" />
     </state>

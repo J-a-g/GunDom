@@ -26,7 +26,7 @@ const val PRODUCT_PAGE_INDEX = 0
 const val FAVORITE_PAGE_INDEX = 1
 const val ME_PAGE_INDEX = 2
 
-class SunflowerPagerAdapter(fragment: Fragment) : FragmentStateAdapter(fragment) {
+class HomePagerAdapter(fragment: Fragment) : FragmentStateAdapter(fragment) {
 
     /**
      * Mapping of the ViewPager page indexes to their respective Fragments
