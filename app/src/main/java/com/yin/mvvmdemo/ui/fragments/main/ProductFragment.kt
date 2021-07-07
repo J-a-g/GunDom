@@ -37,6 +37,7 @@ class ProductFragment : Fragment() {
             }
         })
 
+        Log.w("scj", "products 更新回调 : " + viewModel.products?.value)
         return binding.root
     }
 

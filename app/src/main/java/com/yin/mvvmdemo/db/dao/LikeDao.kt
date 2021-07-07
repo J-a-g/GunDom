@@ -14,6 +14,9 @@ abstract class LikeDao {
     @Delete
     abstract fun deleteLike(like: Like)
 
-    @Query("DELETE FROM `like` WHERE pro_id Like :pro_id AND user_id Like :user_id")
+    @Query("DELETE FROM `like` WHERE pd_id Like :pro_id AND user_id Like :user_id")
     abstract fun deleteLikes(pro_id: Long, user_id: Long)
+
+    @Query("SELECT * FROM `like` WHERE user_id Like :user_id")
+    abstract fun queryLikesByUserId(user_id: Long): Array<Like>
 }

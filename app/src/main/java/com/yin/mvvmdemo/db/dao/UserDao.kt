@@ -3,24 +3,26 @@ package com.yin.mvvmdemo.db.dao
 import android.util.Log
 import androidx.room.*
 import com.yin.mvvmdemo.db.entity.User
+import com.yin.mvvmdemo.db.entity.UserWithProduct
+import com.yin.mvvmdemo.db.entity.UserWithProducts
 
 @Dao
 abstract class UserDao {
 
     @Transaction
-    open fun regist(user: User): Boolean{
+    open fun regist(user: User): Boolean {
         Log.w("scj", "UserDao regist")
         val users = user.username?.let { user.email?.let { it1 -> loadUsersByColumn(it, it1) } }
-        if(users != null && users.isNotEmpty()){
+        if (users != null && users.isNotEmpty()) {
             Log.w("scj", "UserDao 1111")
-            for(uu in users){
+            for (uu in users) {
                 Log.w("scj", "uu-->$uu")
             }
             return false
-        }else{
+        } else {
             Log.w("scj", "UserDao regist 2222")
             val result = insertUsers(user)
-            for(res in result){
+            for (res in result) {
                 Log.w("scj", "res -->$res")
             }
             return true
@@ -48,8 +50,23 @@ abstract class UserDao {
     @Query("SELECT * FROM user WHERE tb_username Like :username OR email Like :email")
     abstract fun loadUsersByColumn(username: String, email: String): Array<User>
 
-    @Query("SELECT * FROM user WHERE email Like :email AND tb_password Like :password")
-    abstract fun loginUser(email: String, password: String): Array<User>
+    @Query("SELECT * FROM user WHERE email Like :email AND tb_password Like :password ORDER BY user_id DESC LIMIT 1")
+    abstract fun loginUser(email: String, password: String): User?
+
+
+    @Transaction
+    @Query("SELECT * FROM user where user_id Like :userid")
+    abstract fun getUsersWithPlaylists(userid: Long): List<UserWithProduct>
+
+
+    //    @Query("update products set likes = 1")
+    @Transaction
+    @Query("SELECT * FROM user")
+    abstract fun getPlaylistsWithSongs2(): List<UserWithProducts>
+
+    @Transaction
+    @Query("SELECT * FROM user")
+    abstract fun getPlaylistsWithSongs(): List<UserWithProducts>
 
 
 //    @Query("SELECT * FROM products WHERE name Like :search")

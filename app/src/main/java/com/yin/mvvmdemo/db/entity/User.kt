@@ -7,7 +7,7 @@ import androidx.room.PrimaryKey
 @Entity(tableName = "user")
 class User {
     @PrimaryKey(autoGenerate = true)
-    var id: Long = 0
+    var user_id: Long = 0
 
     @ColumnInfo(name = "tb_username")
     var username: String? = null
@@ -18,7 +18,7 @@ class User {
     var login: Boolean? = false
 
     override fun toString(): String {
-        return "UserEntity(id=$id, username=$username, password=$password, email=$email, login=$login)"
+        return "UserEntity(id=$user_id, username=$username, password=$password, email=$email, login=$login)"
     }
 
 }

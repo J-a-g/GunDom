@@ -48,8 +48,8 @@ class LoginFragment : Fragment() {
             user.password = binding?.etPassWord?.text.toString().trim()
             user.login = true
             loginViewModel.login(user, object : LoginViewModel.OnLoginListener {
-                override fun onResult(result: Boolean) {
-                    if (result) {
+                override fun onResult(user: User?) {
+                    if (user != null) {
                         startActivity(Intent(activity, Main1Activity::class.java))
                     } else {
                         Toast.makeText(activity, "账号密码错误!", Toast.LENGTH_SHORT).show()
