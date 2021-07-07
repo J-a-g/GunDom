@@ -7,8 +7,10 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import com.google.android.material.tabs.TabLayoutMediator
+import com.yin.mvvmdemo.BasicApp
 import com.yin.mvvmdemo.R
 import com.yin.mvvmdemo.databinding.FragmentViewPageBinding
+import com.yin.mvvmdemo.db.DataRepository
 import com.yin.mvvmdemo.ui.adapter.*
 
 class HomeViewPageFragment : Fragment() {
@@ -21,6 +23,8 @@ class HomeViewPageFragment : Fragment() {
             DataBindingUtil.inflate(inflater, R.layout.fragment_view_page, container, false)
         val viewPager = binding.viewPager
         val tabLayout = binding.tabs
+
+        DataRepository.getInstance()?.updateFavoritesProducts(BasicApp.currentUser.user_id)
 
         viewPager.adapter = HomePagerAdapter(this)
 
@@ -41,7 +45,7 @@ class HomeViewPageFragment : Fragment() {
         return when (position) {
             PRODUCT_PAGE_INDEX -> R.drawable.ic_baseline_home_24
             FAVORITE_PAGE_INDEX -> R.drawable.ic_baseline_favorite_24
-            ME_PAGE_INDEX -> R.drawable.ic_baseline_person_24
+//            ME_PAGE_INDEX -> R.drawable.ic_baseline_person_24
             else -> throw IndexOutOfBoundsException()
         }
     }
@@ -50,7 +54,7 @@ class HomeViewPageFragment : Fragment() {
         return when (position) {
             PRODUCT_PAGE_INDEX -> getString(R.string.product)
             FAVORITE_PAGE_INDEX -> getString(R.string.favorite)
-            ME_PAGE_INDEX -> getString(R.string.me)
+//            ME_PAGE_INDEX -> getString(R.string.me)
             else -> null
         }
     }

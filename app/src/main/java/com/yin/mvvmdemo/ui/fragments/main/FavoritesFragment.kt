@@ -32,7 +32,9 @@ class FavoritesFragment : Fragment() {
         viewModel.products?.observe(viewLifecycleOwner, {
             it?.let {
                 Log.w("scj", "products 更新回调 : " + it)
-                adapter.submitList(it)
+                if (it.isNotEmpty()) {
+                    adapter.submitList(it[0].products)
+                }
             }
         })
 

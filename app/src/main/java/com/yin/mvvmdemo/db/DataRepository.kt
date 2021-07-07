@@ -58,7 +58,7 @@ class DataRepository(private val database: AppDatabase) {
 
     fun getUsersWithPlaylists(user_id: Long) = database.userDao().getUsersWithPlaylists(user_id)
 
-    fun getPlaylistsWithSongs() = database.userDao().getPlaylistsWithSongs()
+    fun getFavoritesProducts(user_id: Long) = database.userDao().getFavoritesProducts(user_id)
 
     fun insertUser(user: User) = database.userDao().insertUsers(user)
 

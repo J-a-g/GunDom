@@ -36,7 +36,7 @@ interface ProductDao {
     @Query("update products set likes = 1")
     fun updateAllProduct()
 
-    @Query("update products set likes = 0 where products.pd_id in (select pd_id from `like` where user_id Like :user_id)")
+    @Query("update products set likes = case when products.pd_id in (select pd_id from `like` where user_id Like :user_id) then 1 else 0 end")
     fun updateFavoritesProducts(user_id: Long)
 
     //所有用户的收藏

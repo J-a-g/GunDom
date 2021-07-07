@@ -1,6 +1,7 @@
 package com.yin.mvvmdemo.db.dao
 
 import android.util.Log
+import androidx.lifecycle.LiveData
 import androidx.room.*
 import com.yin.mvvmdemo.db.entity.User
 import com.yin.mvvmdemo.db.entity.UserWithProduct
@@ -58,15 +59,9 @@ abstract class UserDao {
     @Query("SELECT * FROM user where user_id Like :userid")
     abstract fun getUsersWithPlaylists(userid: Long): List<UserWithProduct>
 
-
-    //    @Query("update products set likes = 1")
     @Transaction
-    @Query("SELECT * FROM user")
-    abstract fun getPlaylistsWithSongs2(): List<UserWithProducts>
-
-    @Transaction
-    @Query("SELECT * FROM user")
-    abstract fun getPlaylistsWithSongs(): List<UserWithProducts>
+    @Query("SELECT * FROM user WHERE user_id Like :user_id")
+    abstract fun getFavoritesProducts(user_id: Long): LiveData<List<UserWithProducts>>
 
 
 //    @Query("SELECT * FROM products WHERE name Like :search")

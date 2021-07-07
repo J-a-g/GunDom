@@ -33,8 +33,8 @@ class HomePagerAdapter(fragment: Fragment) : FragmentStateAdapter(fragment) {
      */
     private val tabFragmentsCreators: Map<Int, () -> Fragment> = mapOf(
         PRODUCT_PAGE_INDEX to { ProductFragment() },
-        FAVORITE_PAGE_INDEX to { FavoritesFragment() },
-        ME_PAGE_INDEX to { MeFragment() }
+        FAVORITE_PAGE_INDEX to { FavoritesFragment() }
+//        ME_PAGE_INDEX to { MeFragment() }
     )
 
     override fun getItemCount() = tabFragmentsCreators.size
