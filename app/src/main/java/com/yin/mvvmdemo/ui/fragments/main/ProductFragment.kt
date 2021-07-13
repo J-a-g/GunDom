@@ -12,7 +12,9 @@ import com.yin.mvvmdemo.R
 import com.yin.mvvmdemo.databinding.FragmentProductBinding
 import com.yin.mvvmdemo.ui.adapter.ProductAdapter
 import com.yin.mvvmdemo.viewmodel.ProductViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class ProductFragment : Fragment() {
 
     private val viewModel: ProductViewModel by viewModels()
@@ -21,7 +23,7 @@ class ProductFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         val binding = FragmentProductBinding.inflate(inflater, container, false)
         binding.viewmodel = viewModel
 //        context ?: return binding.root
@@ -29,15 +31,12 @@ class ProductFragment : Fragment() {
 
         val adapter = ProductAdapter(onItemClickListener)
         binding.productListRecyclerView.adapter = adapter
-        viewModel.products?.observe(viewLifecycleOwner, Observer {
+        viewModel.products.observe(viewLifecycleOwner, Observer {
             it?.let {
                 Log.w("scj", "products 更新回调 : " + it)
-
                 adapter.submitList(it)
             }
         })
-
-        Log.w("scj", "products 更新回调 : " + viewModel.products?.value)
         return binding.root
     }
 

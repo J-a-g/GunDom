@@ -5,7 +5,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import com.yin.mvvmdemo.R
 import com.yin.mvvmdemo.databinding.ActivityMain1Binding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class Main1Activity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {

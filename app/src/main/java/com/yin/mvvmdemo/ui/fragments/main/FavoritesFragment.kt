@@ -12,8 +12,10 @@ import com.yin.mvvmdemo.R
 import com.yin.mvvmdemo.databinding.FragmentFavoritesBinding
 import com.yin.mvvmdemo.ui.adapter.FavoritesAdapter
 import com.yin.mvvmdemo.viewmodel.FavoritesViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
 //收藏
+@AndroidEntryPoint
 class FavoritesFragment : Fragment() {
 
     private val viewModel: FavoritesViewModel by viewModels()

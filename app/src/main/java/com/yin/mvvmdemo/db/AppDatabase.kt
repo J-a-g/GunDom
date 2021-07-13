@@ -1,5 +1,6 @@
 package com.yin.mvvmdemo.db
 
+import android.content.Context
 import android.util.Log
 import androidx.room.Database
 import androidx.room.Room
@@ -25,24 +26,36 @@ abstract class AppDatabase : RoomDatabase() {
         @Volatile
         private var instance: AppDatabase? = null
 
-        fun getInstance(): AppDatabase? {
-            if (instance == null) {
-                synchronized(AppDatabase::class.java) {
-                    if (instance == null) {
-                        Log.w("scj", "赋值单例")
-                        instance = BasicApp.instance?.let {
-                            Room.databaseBuilder(
-                                it,
-                                AppDatabase::class.java, "my_database.db"
-                            ).allowMainThreadQueries()
-                                .addCallback(sRoomDatabaseCallback)
-                                .build()
-                        }
-                    }
-                }
+        fun getInstance(context: Context): AppDatabase {
+            return instance ?: synchronized(this) {
+                instance ?: buildDataBase(context).also { instance = it }
             }
-            Log.w("scj", "instance -->" + instance.hashCode())
-            return instance
+
+//            if (instance == null) {
+//                synchronized(AppDatabase::class.java) {
+//                    if (instance == null) {
+//                        Log.w("scj", "赋值单例")
+//                        instance = BasicApp.instance?.let {
+//                            Room.databaseBuilder(
+//                                it,
+//                                AppDatabase::class.java, "my_database.db"
+//                            ).allowMainThreadQueries()
+//                                .addCallback(sRoomDatabaseCallback)
+//                                .build()
+//                        }
+//                    }
+//                }
+//            }
+//            return instance
+        }
+
+        private fun buildDataBase(context: Context): AppDatabase {
+            return Room.databaseBuilder(
+                context,
+                AppDatabase::class.java, "my_database.db"
+            ).allowMainThreadQueries()
+                .addCallback(sRoomDatabaseCallback)
+                .build()
         }
 
         private val sRoomDatabaseCallback: RoomDatabase.Callback =
@@ -54,6 +67,4 @@ abstract class AppDatabase : RoomDatabase() {
                 }
             }
     }
-
-
 }

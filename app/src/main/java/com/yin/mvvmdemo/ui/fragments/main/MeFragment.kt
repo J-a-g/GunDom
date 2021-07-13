@@ -14,7 +14,9 @@ import com.yin.mvvmdemo.R
 import com.yin.mvvmdemo.databinding.FragmentMeBinding
 import com.yin.mvvmdemo.databinding.FragmentSettingBinding
 import com.yin.mvvmdemo.ui.fragments.login.WelComeFragmentDirections
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MeFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater,

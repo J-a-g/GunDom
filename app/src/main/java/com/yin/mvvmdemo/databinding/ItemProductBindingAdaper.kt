@@ -35,6 +35,6 @@ object ItemProductBindingAdaper {
         }
         drawable.setBounds(0, 0, drawable.minimumWidth, drawable.minimumHeight)
         view.setCompoundDrawables(null, null, drawable, null)
-        view.text = like.toString()
+        view.text = ""  //like.toString()
     }
 }

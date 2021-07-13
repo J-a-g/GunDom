@@ -26,22 +26,34 @@
             tools:listitem="@layout/item_product" />
 
         <Button
+            android:id="@+id/btn_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="@{(view) ->viewmodel.onAll()}"
+            android:text="All系列"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/btn_insert"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="MissingConstraints" />
+
+
+        <Button
             android:id="@+id/btn_insert"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="@{(view) ->viewmodel.onInsert()}"
-            android:text="insert"
+            android:onClick="@{(view) ->viewmodel.onHG()}"
+            android:text="HG系列"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@id/btn_query"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toEndOf="@id/btn_all"
             tools:ignore="MissingConstraints" />
 
         <Button
             android:id="@+id/btn_query"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="@{(view) ->viewmodel.onQuery()}"
-            android:text="query"
+            android:onClick="@{(view) ->viewmodel.onMG()}"
+            android:text="MG系列"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@id/btn_update"
             app:layout_constraintStart_toEndOf="@id/btn_insert"
@@ -51,8 +63,8 @@
             android:id="@+id/btn_update"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="@{(view) ->viewmodel.onUpdate()}"
-            android:text="update"
+            android:onClick="@{(view) ->viewmodel.onPG()}"
+            android:text="PG系列"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/btn_query"

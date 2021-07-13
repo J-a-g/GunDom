@@ -12,7 +12,9 @@ import com.yin.mvvmdemo.R
 import com.yin.mvvmdemo.databinding.FragmentViewPageBinding
 import com.yin.mvvmdemo.db.DataRepository
 import com.yin.mvvmdemo.ui.adapter.*
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class HomeViewPageFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -23,8 +25,6 @@ class HomeViewPageFragment : Fragment() {
             DataBindingUtil.inflate(inflater, R.layout.fragment_view_page, container, false)
         val viewPager = binding.viewPager
         val tabLayout = binding.tabs
-
-        DataRepository.getInstance()?.updateFavoritesProducts(BasicApp.currentUser.user_id)
 
         viewPager.adapter = HomePagerAdapter(this)
 

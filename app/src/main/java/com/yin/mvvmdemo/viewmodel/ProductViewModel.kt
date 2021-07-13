@@ -5,41 +5,73 @@ import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.asLiveData
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import com.google.gson.stream.JsonReader
 import com.yin.mvvmdemo.BasicApp
 import com.yin.mvvmdemo.db.DataRepository
+import com.yin.mvvmdemo.db.ProductRepository
 import com.yin.mvvmdemo.db.entity.Like
 import com.yin.mvvmdemo.db.entity.Product
+import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.flatMapLatest
+import javax.inject.Inject
 
-class ProductViewModel : ViewModel() {
+private const val HG = "HG"
+private const val MG = "MG"
+private const val PG = "PG"
+private const val ALL = "ALL"
+
+@HiltViewModel
+class ProductViewModel @Inject constructor(
+    private val productRepository: ProductRepository
+) : ViewModel() {
 
     var position: Int = 0
     private var topProduct = MutableLiveData<Product?>()
 
-    //    var products = DataRepository.getInstance()?.queryProduct()
-    var products: LiveData<List<Product>>? = null
-    //DataRepository.getInstance()?.queryProductByUserLikes(BasicApp.currentUser.id) //= DataRepository.getInstance()?.queryProductByUserLikes(BasicApp.currentUser.id)
-//    val updateTest: MutableLiveData<Boolean> = MutableLiveData(false)
-//    lateinit var products: LiveData<List<Product>>
+    //    var products = productRepository.queryProduct()
+    private val brandType = MutableStateFlow(ALL)
+    val products: LiveData<List<Product>> = brandType.flatMapLatest {
+        if (it == ALL) {
+            productRepository.queryProduct()
+        } else {
+            productRepository.queryBrandProduct(it)
+        }
+    }.asLiveData()
 
     init {
-//        topProduct.value = DataRepository.getInstance()?.queryTopProduct()
-        Log.w("scj", "ProdctViewModel init")
-        products = DataRepository.getInstance()?.queryProductByUserLikes(BasicApp.currentUser.user_id)
+        productRepository.updateFavoritesProducts(BasicApp.currentUser.user_id)
     }
 
     fun onclickItem(position: Int) {
         this.position = position
-        topProduct.value = products?.value?.get(position)
-        Log.w("scj", "onClickItem->" + position + " -- " + topProduct.value.toString())
+        topProduct.value = products.value?.get(position)
     }
+
+    fun onAll() {
+        brandType.value = ALL
+    }
+
+    fun onHG() {
+        brandType.value = HG
+    }
+
+    fun onMG() {
+        brandType.value = MG
+    }
+
+    fun onPG() {
+        brandType.value = PG
+    }
+
 
     fun onInsert() {
         Log.w("scj", "onInsert")
         val pro = Product()
-        DataRepository.getInstance()?.insert(pro)
+        productRepository.insert(pro)
         position = 0
     }
 
@@ -52,7 +84,7 @@ class ProductViewModel : ViewModel() {
                 for (gd in gundoms) {
                     Log.w("scj", "gundom : " + gd.toString())
                 }
-                DataRepository.getInstance()?.insertProducts(gundoms)
+                productRepository.insertProducts(gundoms)
             }
         }
     }
@@ -86,8 +118,7 @@ class ProductViewModel : ViewModel() {
 //        }
 
 
-
-        DataRepository.getInstance()?.updateFavoritesProducts(BasicApp.currentUser.user_id)
+        productRepository.updateFavoritesProducts(BasicApp.currentUser.user_id)
 
     }
 
@@ -100,15 +131,17 @@ class ProductViewModel : ViewModel() {
             if (pro.likes == 0) {
                 pro.likes = 1
 
-                DataRepository.getInstance()?.insertLike(Like(pro.pd_id, BasicApp.currentUser.user_id))
+                DataRepository.getInstance()
+                    ?.insertLike(Like(pro.pd_id, BasicApp.currentUser.user_id))
             } else {
                 pro.likes = 0
-                DataRepository.getInstance()?.deleteLike(Like(pro.pd_id, BasicApp.currentUser.user_id))
+                DataRepository.getInstance()
+                    ?.deleteLike(Like(pro.pd_id, BasicApp.currentUser.user_id))
             }
 
             newList.removeAt(position)
             newList.add(position, pro)
-            DataRepository.getInstance()?.updateProducts(pro)
+            productRepository.updateProducts(pro)
         }
     }
 }

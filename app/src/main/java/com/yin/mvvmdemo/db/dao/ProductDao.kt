@@ -6,6 +6,7 @@ import com.yin.mvvmdemo.db.entity.Product
 import com.yin.mvvmdemo.db.entity.ProductWithUsers
 import com.yin.mvvmdemo.db.entity.Result
 import com.yin.mvvmdemo.db.entity.UserWithProducts
+import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface ProductDao {
@@ -28,7 +29,16 @@ interface ProductDao {
     fun deleteProducts(vararg product: Product)
 
     @Query("SELECT * FROM products ORDER BY pd_id DESC")
-    fun loadAllProducts(): LiveData<List<Product>>
+    fun loadAllProducts(): Flow<List<Product>>
+
+    @Query("SELECT * FROM products WHERE pd_brand LIKE :brand ORDER BY pd_id DESC")
+    fun loadBrandProducts(brand: String): Flow<List<Product>>
+
+//    @Query("SELECT * FROM products WHERE pd_brand LIKE :brand ORDER BY pd_id DESC")
+//    fun loadBrandProductsFlow(brand: String): Flow<List<Product>>
+
+//    @Query("SELECT * FROM products WHERE pd_brand LIKE :brand ORDER BY pd_id DESC")
+//    fun loadBrandProducts2(brand: String): List<Product>
 
     @Query("SELECT * FROM products ORDER BY pd_id DESC LIMIT 1")
     fun getTopProduct(): Product?
