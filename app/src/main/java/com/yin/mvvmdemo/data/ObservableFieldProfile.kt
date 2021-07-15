@@ -40,7 +40,7 @@ data class ObservableFieldProfile(
 
     fun onCheckUrl() {
         Log.w("scj", "onCheckUrl")
-        url.set("http://192.168.1.104/TestDemo2/img_test2.png")
+        url.set("https://gitee.com/jags/pictures/raw/master/images/img_test2.png")
     }
 
     fun onLike(view: View) {

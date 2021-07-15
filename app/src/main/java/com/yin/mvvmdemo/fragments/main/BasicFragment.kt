@@ -21,7 +21,7 @@ class BasicFragment : Fragment() {
         "大强",
         ObservableField("苏"),
         ObservableInt(0),
-        ObservableField("http://192.168.1.104/TestDemo2/img_test.jpg")
+        ObservableField("https://gitee.com/jags/pictures/raw/master/images/img_test.jpg")
     )
 
     lateinit var binding: FragmentBasicBinding
