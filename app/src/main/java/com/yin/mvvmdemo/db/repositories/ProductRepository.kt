@@ -1,4 +1,4 @@
-package com.yin.mvvmdemo.db
+package com.yin.mvvmdemo.db.repositories
 
 import com.yin.mvvmdemo.db.dao.ProductDao
 import com.yin.mvvmdemo.db.entity.Product

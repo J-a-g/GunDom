@@ -7,10 +7,8 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import com.google.android.material.tabs.TabLayoutMediator
-import com.yin.mvvmdemo.BasicApp
 import com.yin.mvvmdemo.R
 import com.yin.mvvmdemo.databinding.FragmentViewPageBinding
-import com.yin.mvvmdemo.db.DataRepository
 import com.yin.mvvmdemo.ui.adapter.*
 import dagger.hilt.android.AndroidEntryPoint
 

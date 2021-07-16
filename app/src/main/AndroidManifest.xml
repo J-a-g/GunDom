@@ -25,9 +25,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".ui.activity.Main1Activity"/>
-        <activity android:name=".ui.activity.RoomTestActivity"/>
-
+        <activity android:name=".ui.activity.Main1Activity" />
     </application>
 
 </manifest>

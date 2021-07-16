@@ -2,9 +2,9 @@ package com.yin.mvvmdemo.di
 
 import android.content.Context
 import com.yin.mvvmdemo.db.AppDatabase
+import com.yin.mvvmdemo.db.dao.LikeDao
 import com.yin.mvvmdemo.db.dao.ProductDao
 import com.yin.mvvmdemo.db.dao.UserDao
-import com.yin.mvvmdemo.db.entity.Product
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -29,5 +29,10 @@ class DatabaseModule {
     @Provides
     fun provideUserDao(appDatabase: AppDatabase): UserDao {
         return appDatabase.userDao()
+    }
+
+    @Provides
+    fun provideLikeDao(appDatabase: AppDatabase): LikeDao {
+        return appDatabase.likeDao()
     }
 }

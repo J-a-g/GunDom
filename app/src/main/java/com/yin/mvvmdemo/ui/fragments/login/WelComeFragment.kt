@@ -10,7 +10,9 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.yin.mvvmdemo.R
 import com.yin.mvvmdemo.databinding.FragmentWelcomeBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class WelComeFragment : Fragment() {
 
     override fun onCreateView(

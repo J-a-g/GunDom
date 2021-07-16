@@ -10,10 +10,10 @@ import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import com.google.gson.stream.JsonReader
 import com.yin.mvvmdemo.BasicApp
-import com.yin.mvvmdemo.db.DataRepository
-import com.yin.mvvmdemo.db.ProductRepository
+import com.yin.mvvmdemo.db.repositories.ProductRepository
 import com.yin.mvvmdemo.db.entity.Like
 import com.yin.mvvmdemo.db.entity.Product
+import com.yin.mvvmdemo.db.repositories.LikeRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.flatMapLatest
@@ -26,7 +26,8 @@ private const val ALL = "ALL"
 
 @HiltViewModel
 class ProductViewModel @Inject constructor(
-    private val productRepository: ProductRepository
+    private val productRepository: ProductRepository,
+    private val likeRepository: LikeRepository
 ) : ViewModel() {
 
     var position: Int = 0
@@ -127,16 +128,12 @@ class ProductViewModel @Inject constructor(
         val pro = newList?.get(position)?.copy()
         if (pro != null) {
             Log.w("scj", "修改原来数据 ：" + pro.toString())
-
             if (pro.likes == 0) {
                 pro.likes = 1
-
-                DataRepository.getInstance()
-                    ?.insertLike(Like(pro.pd_id, BasicApp.currentUser.user_id))
+                likeRepository.insertLike(Like(pro.pd_id, BasicApp.currentUser.user_id))
             } else {
                 pro.likes = 0
-                DataRepository.getInstance()
-                    ?.deleteLike(Like(pro.pd_id, BasicApp.currentUser.user_id))
+                likeRepository.deleteLike(Like(pro.pd_id, BasicApp.currentUser.user_id))
             }
 
             newList.removeAt(position)

@@ -15,7 +15,9 @@ import com.yin.mvvmdemo.databinding.FragmentLoginBinding
 import com.yin.mvvmdemo.db.entity.User
 import com.yin.mvvmdemo.ui.activity.Main1Activity
 import com.yin.mvvmdemo.viewmodel.LoginViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class LoginFragment : Fragment() {
 
     private val loginViewModel by lazy {

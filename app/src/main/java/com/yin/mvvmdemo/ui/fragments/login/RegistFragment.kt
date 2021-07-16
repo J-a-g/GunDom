@@ -1,7 +1,6 @@
 package com.yin.mvvmdemo.ui.fragments.login
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -13,11 +12,12 @@ import com.yin.mvvmdemo.R
 import com.yin.mvvmdemo.databinding.FragmentRegistBinding
 import com.yin.mvvmdemo.db.entity.User
 import com.yin.mvvmdemo.viewmodel.RegistViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class RegistFragment : Fragment() {
 
     private val registViewModel by lazy {
-        Log.w("scj", "1111111111")
         ViewModelProvider(this).get(RegistViewModel::class.java)
     }
 
