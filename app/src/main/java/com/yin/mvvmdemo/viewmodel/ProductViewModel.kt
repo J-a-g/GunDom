@@ -2,10 +2,7 @@ package com.yin.mvvmdemo.viewmodel
 
 import android.content.Context
 import android.util.Log
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
-import androidx.lifecycle.asLiveData
+import androidx.lifecycle.*
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import com.google.gson.stream.JsonReader
@@ -17,6 +14,7 @@ import com.yin.mvvmdemo.db.repositories.LikeRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.flatMapLatest
+import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 private const val HG = "HG"
@@ -52,6 +50,19 @@ class ProductViewModel @Inject constructor(
         topProduct.value = products.value?.get(position)
     }
 
+    fun init(){
+        viewModelScope.launch {
+            val context = BasicApp.instance as Context
+            context.assets.open("gundom.json").use {
+                JsonReader(it.reader()).use {
+                    val gundomType = object : TypeToken<List<Product>>() {}.type
+                    val gundoms: List<Product> = Gson().fromJson(it, gundomType)
+                    productRepository.insertProducts(gundoms)
+                }
+            }
+        }
+    }
+
     fun onAll() {
         brandType.value = ALL
     }
@@ -74,20 +85,6 @@ class ProductViewModel @Inject constructor(
         val pro = Product()
         productRepository.insert(pro)
         position = 0
-    }
-
-    fun onQuery() {
-        val context = BasicApp.instance as Context
-        context.assets.open("gundom.json").use {
-            JsonReader(it.reader()).use {
-                val gundomType = object : TypeToken<List<Product>>() {}.type
-                val gundoms: List<Product> = Gson().fromJson(it, gundomType)
-                for (gd in gundoms) {
-                    Log.w("scj", "gundom : " + gd.toString())
-                }
-                productRepository.insertProducts(gundoms)
-            }
-        }
     }
 
     fun onUpdate() {
@@ -124,7 +121,7 @@ class ProductViewModel @Inject constructor(
     }
 
     fun onLike(position: Int) {
-        val newList = products?.value?.toMutableList()
+        val newList = products.value?.toMutableList()
         val pro = newList?.get(position)?.copy()
         if (pro != null) {
             Log.w("scj", "修改原来数据 ：" + pro.toString())

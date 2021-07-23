@@ -6,7 +6,6 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import androidx.sqlite.db.SupportSQLiteDatabase
-import com.yin.mvvmdemo.BasicApp
 import com.yin.mvvmdemo.db.dao.LikeDao
 import com.yin.mvvmdemo.db.dao.ProductDao
 import com.yin.mvvmdemo.db.dao.UserDao
@@ -14,7 +13,7 @@ import com.yin.mvvmdemo.db.entity.Like
 import com.yin.mvvmdemo.db.entity.Product
 import com.yin.mvvmdemo.db.entity.User
 
-@Database(entities = arrayOf(Product::class, User::class, Like::class), version = 1)
+@Database(entities = [Product::class, User::class, Like::class], version = 1)
 abstract class AppDatabase : RoomDatabase() {
     abstract fun productDao(): ProductDao
 

@@ -12,26 +12,17 @@ abstract class UserDao {
 
     @Transaction
     open fun regist(user: User): Boolean {
-        Log.w("scj", "UserDao regist")
         val users = user.username?.let { user.email?.let { it1 -> loadUsersByColumn(it, it1) } }
-        if (users != null && users.isNotEmpty()) {
-            Log.w("scj", "UserDao 1111")
-            for (uu in users) {
-                Log.w("scj", "uu-->$uu")
-            }
-            return false
+        return if (users != null && users.isNotEmpty()) {
+            false
         } else {
-            Log.w("scj", "UserDao regist 2222")
-            val result = insertUsers(user)
-            for (res in result) {
-                Log.w("scj", "res -->$res")
-            }
-            return true
+            insertUsers(user)
+            true
         }
     }
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    abstract fun insertUsers(vararg users: User): List<Long>//vararg 可变参数
+    abstract fun insertUsers(vararg users: User): List<Long>
 
 //    @Insert
 //    fun insertBothProducts(product1: ProductEntity, product2: ProductEntity)

@@ -2,10 +2,7 @@ package com.yin.mvvmdemo.db.dao
 
 import androidx.lifecycle.LiveData
 import androidx.room.*
-import com.yin.mvvmdemo.db.entity.Product
-import com.yin.mvvmdemo.db.entity.ProductWithUsers
-import com.yin.mvvmdemo.db.entity.Result
-import com.yin.mvvmdemo.db.entity.UserWithProducts
+import com.yin.mvvmdemo.db.entity.*
 import kotlinx.coroutines.flow.Flow
 
 @Dao
@@ -14,7 +11,7 @@ interface ProductDao {
     fun insertProduct(product: Product)
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun insertProducts(product: List<Product>)
+    suspend fun insertProducts(product: List<Product>)
 
     @Insert
     fun insertBothProducts(product1: Product, product2: Product)
@@ -39,6 +36,9 @@ interface ProductDao {
 
 //    @Query("SELECT * FROM products WHERE pd_brand LIKE :brand ORDER BY pd_id DESC")
 //    fun loadBrandProducts2(brand: String): List<Product>
+
+    @Query("SELECT pd_name, pd_price FROM products")
+    fun getNamePrices(): List<NameTuple>
 
     @Query("SELECT * FROM products ORDER BY pd_id DESC LIMIT 1")
     fun getTopProduct(): Product?

@@ -27,13 +27,16 @@ class ProductFragment : Fragment() {
         val binding = FragmentProductBinding.inflate(inflater, container, false)
         binding.viewmodel = viewModel
 //        context ?: return binding.root
-        binding.lifecycleOwner = this// TODO 有疑问
+        binding.lifecycleOwner = this
 
         val adapter = ProductAdapter(onItemClickListener)
         binding.productListRecyclerView.adapter = adapter
         viewModel.products.observe(viewLifecycleOwner, Observer {
             it?.let {
                 Log.w("scj", "products 更新回调 : " + it)
+                if (it.isEmpty()) {
+                    viewModel.init()
+                }
                 adapter.submitList(it)
             }
         })
@@ -42,10 +45,10 @@ class ProductFragment : Fragment() {
 
     private val onItemClickListener = object : ProductAdapter.OnItemClickListener {
         override fun onItemClick(view: View, position: Int) {
-            if(view.id == R.id.tv_like){
+            if (view.id == R.id.tv_like) {
                 Log.w("scj", "position ->" + position + " 被点赞")
                 viewModel.onLike(position)
-            }else {
+            } else {
                 viewModel.onclickItem(position)
             }
         }

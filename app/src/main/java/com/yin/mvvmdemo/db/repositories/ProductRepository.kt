@@ -1,5 +1,6 @@
 package com.yin.mvvmdemo.db.repositories
 
+import android.util.Log
 import com.yin.mvvmdemo.db.dao.ProductDao
 import com.yin.mvvmdemo.db.entity.Product
 import javax.inject.Inject
@@ -9,7 +10,7 @@ import javax.inject.Singleton
 class ProductRepository @Inject constructor(private val productDao: ProductDao) {
     fun insert(product: Product) = productDao.insertProduct(product)
 
-    fun insertProducts(products: List<Product>) = productDao.insertProducts(products)
+    suspend fun insertProducts(products: List<Product>) = productDao.insertProducts(products)
 
     fun queryProduct() = productDao.loadAllProducts()
 
